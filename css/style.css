@@ -120,6 +120,7 @@ section#about {
 section#about h2 { margin: 0 0 1rem; }
 section#about p.peace { font-size: 2rem; }
 section#image img  { margin-top: 7rem; }
+section#work ul.post-list li { margin-bottom: 3rem; }
 section#contact h3 {
 	font-size: 1.75em;
 	margin: 3em 0;

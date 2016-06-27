@@ -14,16 +14,19 @@ layout: default
     <img src="img/me.jpg" alt="The man himself" />
 </section>
 
-<h2 class="grid__col--12-of-12 grid__col">My work</h2>
+<section id="work">
+    <h2 class="grid__col--12-of-12 grid__col">My work</h2>
 
-<ul class="post-list no-bullet">
-    {% for post in site.posts %}
-        <li>
-            <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-            <h2 class="grid__col--12-of-12 grid__col"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-            <div class="grid__col--3-of-4 grid__col">{{ post.content }}</div>
-        </li>
-    {% endfor %}
-</ul>
+    <ul class="post-list no-bullet">
+        {% for post in site.posts %}
+            <li class="post">
+                <h2 class="grid__col--12-of-12 grid__col"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                <div class="grid__col--3-of-4 grid__col">{{ post.content }}</div>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
 
-<!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+<section id="contact" class="grid__col--centered grid__col--12-of-12 grid__col">
+    <h3>Interested in having me work on your project? Get in touch <svg class="icon icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-arrow-right"></use></svg></h3>
+</section>
