@@ -113,7 +113,10 @@ header a.home svg {
 	width:  1rem;
 }
 header a.arrow svg, header a.home svg { fill: #fff; }
-section#about { padding: 3rem inherit; }
+section#about {
+	padding-top:    3rem;
+	padding-bottom: 3rem;
+}
 section#about h2 { margin: 0 0 1rem; }
 section#about p.peace { font-size: 2rem; }
 section#image img  { margin-top: 7rem; }
