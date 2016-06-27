@@ -1,0 +1,255 @@
+/*
+Theme Name: Paul
+Author: Paul Schaefer
+Author URI: https://paulmakesthe.net/
+Version: 4.2.0
+*/
+/* RESETS */
+@charset 'UTF-8';
+html {
+	font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	box-sizing: border-box;
+	color: #111;
+}
+*, *:before, *:after { box-sizing: inherit; }
+
+/* COMMON CLASSES */
+.disable-hover, .disable-hover * { pointer-events: none !important; }
+.container {
+	max-width: 1200px;
+	max-width:   75vw;
+	margin: 0 auto;
+}
+.grid__col--centered { text-align: center; }
+/*.featured-image {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: block;
+	height: 20rem;
+}*/
+
+/* TYPOGRAPHY */
+img { max-width: 100%; }
+a, a:visited {
+	-webkit-transition: border .125s;
+	transition:         border .125s;
+	border-bottom: 2px solid;
+	text-decoration: none;
+	color: inherit;
+}
+a:hover { border-bottom: 2px solid #e14d43; }
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Palatino Linotype', Georgia, serif;
+	font-weight: normal;
+	line-height: 1;
+}
+p {
+	padding-bottom: 2em;
+	line-height: 1.4;
+	margin: 0;
+}
+ul.no-bullet {
+	list-style: none;
+	padding: 0;
+}
+
+/* LAYOUT */
+header {
+	background-color: #111;
+	position: relative;
+	display: table;
+	height: 30vh;
+	width: 100%;
+	color: #fff;
+}
+header.home { height: 100vh; }
+header div#particles-cont {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+header div.wrap {
+	vertical-align: middle;
+	letter-spacing: -2px;
+	display: table-cell;
+	font-style:  italic;
+	position: relative;
+	text-align: center;
+	font-size:  4vw;
+	z-index: 9;
+}
+header.home div.wrap { font-size: 6vw; }
+header h1 {
+	padding: 0 5px;
+	margin: 0;
+}
+body.home header h1 { margin-bottom: .67em; }
+header span.amp { display: inline-block; }
+header a, header a:hover { border: none; }
+header a.arrow {
+	position: absolute;
+	text-align: center;
+	outline: none;
+	width: 100%;
+	z-index: 99;
+	bottom: 1%;
+	left: 0%;
+}
+header a.home {
+	text-transform: uppercase;
+	padding: 1rem 0 0 1rem;
+	position: absolute;
+	z-index: 99;
+	left: 0;
+	top: 0;
+}
+header a.arrow svg {
+	height: 2.5rem;
+	width:  2.5rem;
+}
+header a.home svg {
+	height: 1rem;
+	width:  1rem;
+}
+header a.arrow svg, header a.home svg { fill: #fff; }
+section#about { padding: 3rem 0; }
+section#about h2 { margin: 0 0 1rem; }
+section#about p.peace { font-size: 2rem; }
+section#image img  { margin-top: 7rem; }
+section#contact h3 {
+	font-size: 1.75em;
+	margin: 3em 0;
+}
+section#contact h3 a {
+	display: inline-block;
+	font-weight:  bold;
+	padding-top: .5em;
+}
+section#contact h3 a svg {
+	height: 1.25rem;
+	width:  1.25rem;
+	fill: #111;
+}
+footer {
+	text-transform: uppercase;
+	background-color: #111;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	padding: 50px 0 0;
+	font-size: .8em;
+	color:  #ddd;
+}
+footer ul, footer ul li {
+	text-align: left;
+	list-style: none;
+	line-height: 2;
+	padding: 0;
+	margin:  0;
+}
+footer ul li a:hover { text-decoration: underline; }
+footer a, footer a:hover { border: none; }
+footer .icon {
+    -webkit-transition: all .125s ease;
+    transition:         all .125s ease;
+	margin: 1rem .5rem 2rem;
+    display: inline-block;
+    font-weight: normal;
+    height: 2rem;
+    width: 2rem;
+    fill: #fff;
+}
+footer .icon:hover {
+	-webkit-transform: scale(1.25,1.25);
+	transform:         scale(1.25,1.25);
+}
+
+/* RESPONSIVENESS MAGIC */
+@media (max-width: 700px) {
+	.container {
+		max-width: 90%;
+		max-width: 90vw;
+	}
+	.grid__col { padding-left: 0 !important; }
+	header div.wrap { font-size: 8vw; }
+	body.home header div.wrap { font-size: 11vw; }
+	header h1 { margin: 0; }
+	header span.amp {
+		margin: 0 auto;
+		display: block;
+	}
+	section#stats img { display: none; }
+	footer ul {
+		margin-bottom: 3rem;
+		text-align:  center;
+	}
+	footer ul li {
+		display: inline-block;
+		padding: 0 1rem;
+	}
+}
+
+/* LANDSCAPE HACKS */
+@media (max-width: 700px) and (orientation: landscape) {
+	body.home header div.wrap { font-size: 6vw; }
+	body.home header h3 { line-height: 1.15; }
+}
+
+/* ANIMATION GOODNESS */
+/* originally authored by Dan Eden - https://github.com/daneden/animate.css/ */
+@-webkit-keyframes bounce {
+	from, 20%, 53%, 80%, to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		animation-timing-function:         cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		-webkit-transform: translate3d(0,0,0);
+		transform:         translate3d(0,0,0);
+	}
+	40%, 43% {
+		-webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		animation-timing-function:         cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		-webkit-transform: translate3d(0, -30px, 0);
+		transform:         translate3d(0, -30px, 0);
+	}
+	70% {
+		-webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		animation-timing-function:         cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		-webkit-transform: translate3d(0, -15px, 0);
+		transform:         translate3d(0, -15px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0,-4px,0);
+		transform:         translate3d(0,-4px,0);
+	}
+}
+
+@keyframes bounce {
+	from, 20%, 53%, 80%, to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		animation-timing-function:         cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		-webkit-transform: translate3d(0,0,0);
+		transform:         translate3d(0,0,0);
+	}
+	40%, 43% {
+		-webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		animation-timing-function:         cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		-webkit-transform: translate3d(0, -30px, 0);
+		transform:         translate3d(0, -30px, 0);
+	}
+	70% {
+		-webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		animation-timing-function:         cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		-webkit-transform: translate3d(0, -15px, 0);
+		transform:         translate3d(0, -15px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0,-4px,0);
+		transform:         translate3d(0,-4px,0);
+	}
+}
+.bounce {
+	-webkit-animation: 3s ease-in-out 1s infinite both bounce;
+	animation-name:    3s ease-in-out 1s infinite both bounce;
+	-webkit-transform-origin: center bottom;
+	transform-origin:         center bottom;
+}

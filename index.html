@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="home grid__col grid__col--12-of-12">
+    <section class="grid__col--2-of-3 grid__col" id="about">
+        <h1 class="page-heading">Why hello there!</h1>
+
+        <p>As we float through everyday life, we slowly discover what has meaning. Something that may be meaningful for you, is not for others. Learn to love this difference, and then progress is inevitable.</p>
+        <p>Everything in the world is somehow designed, and therefore can be improved. That&#8217;s an extremely powerful thought that I can&#8217;t manage to forget. Because of this, I have a very high standard for my work. Design is all about choices; whether they are good or bad, is up to the designer.</p>
+        <p>Welcome to my humble little corner of the Internet. This website will always be a work in progress, constantly being updated with new designs and new performance tweaks. Take a look around, and <a href="contact">give me a holler</a> if you get lost.</p>
+        <p>You are welcome follow me on <a href="https://instagram.com/pschfr" target="_blank">Instagram</a> for sunsets and cat pictures, or on <a href="https://twitter.com/pschfr" target="_blank">Twitter</a> if you would like to hear me rant about this, that, or the other thing. The source code for this website (and others) is available on my <a href="https://github.com/pschfr" target="_blank">GitHub.</a></p>
+        <p class="peace">✌️</p>
+    </section>
+
+    <section class="grid__col--1-of-3 grid__col" id="image">
+        <img src="img/me.jpg" alt="The man himself" />
+    </section>
+
+    <h2>My work</h2>
+
+    <ul class="post-list no-bullet grid__col--12-of-12 grid__col">
+        {% for post in site.posts %}
+            <li>
+                <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+                <h2 class="grid__col--12-of-12 grid__col"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                <div class="grid__col--3-of-4 grid__col">{{ post.content }}</div>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
+</div>
