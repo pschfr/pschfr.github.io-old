@@ -1,28 +1,25 @@
 ---
 layout: default
-title: Paul Schaefer, designer & web developer
-permalink: /
 ---
 <section class="grid__col--2-of-3 grid__col" id="about">
-    <h1 class="page-heading">Why hello there!</h1>
+    <h1 class="page-heading">Hello world!</h1>
 
     <p>As we float through everyday life, we slowly discover what has meaning. Something that may be meaningful for you, is not for others. Learn to love this difference, and then progress is inevitable.</p>
-    <p>Everything in the world is somehow designed, and therefore can be improved. That&#8217;s an extremely powerful thought that I can&#8217;t manage to forget. Because of this, I have a very high standard for my work. Design is all about choices; whether they are good or bad, is up to the designer.</p>
-    <p>Welcome to my humble little corner of the Internet. This website will always be a work in progress, constantly being updated with new designs and new performance tweaks. Take a look around, and <a href="contact">give me a holler</a> if you get lost.</p>
+    <p>Everything in the world is somehow designed, and therefore can be improved. That's an extremely powerful thought that I can't manage to forget. Because of this, I have a very high standard for my work. Design is all about choices; whether they are good or bad, is up to the designer.</p>
+    <p>Welcome to my humble little corner of the internet. This website will always be a work in progress, constantly being updated with new designs and new performance tweaks. Take a look around, and <a href="contact">give me a holler</a> if you get lost.</p>
     <p>You are welcome follow me on <a href="https://instagram.com/pschfr" target="_blank">Instagram</a> for sunsets and cat pictures, or on <a href="https://twitter.com/pschfr" target="_blank">Twitter</a> if you would like to hear me rant about this, that, or the other thing. The source code for this website (and others) is available on my <a href="https://github.com/pschfr" target="_blank">GitHub.</a></p>
-    <p class="peace">✌️</p>
 </section>
 <section class="grid__col--1-of-3 grid__col" id="image">
     <img src="img/me.jpg" alt="The man himself" />
 </section>
 
 <section id="work">
-    <h2 class="grid__col--12-of-12 grid__col">My work</h2>
-
+    <h2 class="grid__col--12-of-12 grid__col section-title">My work</h2>
+    <hr class="section-title">
     <ul class="post-list no-bullet">
         {% for post in site.posts %}
             <li class="post">
-                <h2 class="grid__col--12-of-12 grid__col"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                <h2 class="grid__col--12-of-12 grid__col">{{ post.title }}</h2>
                 <div class="grid__col--3-of-4 grid__col">{{ post.content }}</div>
             </li>
         {% endfor %}

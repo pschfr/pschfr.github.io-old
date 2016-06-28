@@ -20,5 +20,9 @@ navigation:
 - text: Contact
   url: /contact/
 
+# for when building the contact page
+# http://mattgemmell.com/page-specific-assets-with-jekyll/
+# http://www.tonysheng.com/howto/conditional-cta-jekyll/
+
 # Build settings
 markdown: kramdown

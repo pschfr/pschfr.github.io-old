@@ -53,6 +53,14 @@ ul.no-bullet {
 	list-style: none;
 	padding: 0;
 }
+h2.section-title { margin-bottom: 10px; }
+hr.section-title {
+	background-color: #111;
+	margin: 0 0 0 20px;
+	width: 10rem;
+	height: 2px;
+	border: 0;
+}
 
 /* LAYOUT */
 header {
@@ -118,8 +126,10 @@ section#about {
 	padding-bottom: 3rem;
 }
 section#about h2 { margin: 0 0 1rem; }
-section#about p.peace { font-size: 2rem; }
-section#image img  { margin-top: 7rem; }
+section#image img {
+	margin-top: 7rem;
+	width: 80%;
+}
 section#work ul.post-list li { margin-bottom: 3rem; }
 section#contact h3 {
 	font-size: 1.75em;
@@ -176,14 +186,14 @@ footer .icon:hover {
 		max-width: 90vw;
 	}
 	.grid__col { padding-left: 0 !important; }
-	header div.wrap { font-size: 8vw; }
-	body.home header div.wrap { font-size: 11vw; }
+	hr.section-title { margin-left: 0; }
+	header div.wrap { font-size: 11vw; }
 	header h1 { margin: 0; }
 	header span.amp {
 		margin: 0 auto;
 		display: block;
 	}
-	section#stats img { display: none; }
+	section#image img { display: none; }
 	footer ul {
 		margin-bottom: 3rem;
 		text-align:  center;
