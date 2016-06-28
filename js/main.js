@@ -1,9 +1,35 @@
-// Initiates particleground and tweaks density
-// TODO: once scrolled past top, pause particleground via pg.pause();
-particleground(document.getElementById('particles-cont'), { density:   '9000' });
+// Initiates Trianglify
+var site_header = document.getElementById('site_header');
+var dimensions = site_header.getClientRects()[0];
+var pattern = Trianglify({
+    width: dimensions.width,
+    height: dimensions.height
+});
+site_header.appendChild(pattern.canvas());
 
 // Tweaks ZenScroll default speed
 zenscroll.setup(500);
+
+// Listens for scroll events
+var addEvent = function(object, type, callback) {
+    if (object == null || typeof(object) == 'undefined') return;
+    if (object.addEventListener) {
+        object.addEventListener(type, callback, false);
+    } else if (object.attachEvent) {
+        object.attachEvent("on" + type, callback);
+    } else {
+        object["on"+type] = callback;
+    }
+};
+
+// Removes Trianglify and reloads on resize
+addEvent(window, "resize", function(event) {
+    var pattern_canvas = site_header.getElementsByTagName('canvas')[0];
+    var old_pattern    = pattern_canvas.remove();
+    site_header.appendChild(pattern.canvas());
+    console.log('resized');
+    console.log(pattern_canvas);
+});
 
 // Magic that disables pointer events on scroll, really improves performance
 var body = document.body, timer;

@@ -64,28 +64,24 @@ hr.section-title {
 
 /* LAYOUT */
 header {
-	background-color: #111;
 	position: relative;
-	display: table;
 	height: 30vh;
 	width: 100%;
-	color: #fff;
+	color: #444;
 }
 header.home { height: 100vh; }
-header div#particles-cont {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-}
+header#site-header { background: none; }
 header div.wrap {
+	-webkit-transform: translate(-50%, -50%);
+	transform:         translate(-50%, -50%);
 	vertical-align: middle;
 	letter-spacing: -2px;
-	display: table-cell;
-	font-style:  italic;
-	position: relative;
+	font-style: italic;
+	position: absolute;
 	text-align: center;
-	font-size:  4vw;
-	z-index: 9;
+	font-size: 4vw;
+	left: 50%;
+	top: 50%;
 }
 header.home div.wrap { font-size: 6vw; }
 header h1 {
@@ -100,7 +96,6 @@ header a.arrow {
 	text-align: center;
 	outline: none;
 	width: 100%;
-	z-index: 99;
 	bottom: 1%;
 	left: 0%;
 }
@@ -120,7 +115,7 @@ header a.home svg {
 	height: 1rem;
 	width:  1rem;
 }
-header a.arrow svg, header a.home svg { fill: #fff; }
+header a.arrow svg, header a.home svg { fill: #444; }
 section#about {
 	padding-top:    3rem;
 	padding-bottom: 3rem;
