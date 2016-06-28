@@ -2,7 +2,7 @@
 <div class="wrap">
 {% if page.url == "/" %}
 <h1 class="site-title">{{ site.title }}</h1>
-<h3 class="site-tagline">{{ site.tagline }}</h3>
+<h3 class="site-tagline">web designer<span class="amp">&nbsp;&amp;&nbsp;</span>developer</h3>
 </div>
 <a class='arrow bounce' href='#about'>
 <svg class="icon icon-arrow-down"><use xlink:href="/symbol-defs.svg#icon-arrow-down"></use></svg>
@@ -10,6 +10,6 @@
 {% else %}
 <h1 class="site-title">{{ page.title }}</h1>
 </div>
-<a href="{{ site.url | url_escape }}" class="home"><svg class="icon icon-home"><use xlink:href="/symbol-defs.svg#icon-home"></use></svg> Home</a>
+<a href="/" class="home"><svg class="icon icon-home"><use xlink:href="/symbol-defs.svg#icon-home"></use></svg> Home</a>
 {% endif %}
 </header>

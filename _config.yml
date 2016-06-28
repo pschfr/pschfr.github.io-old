@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 # Site settings
 title: Paul Schaefer
-tagline: designer & web developer
+tagline: web designer & developer
 email: yeppaul2@gmail.com
 description: Paul Schaefer is a designer and web developer living in the lovely Pittsburgh, PA
 
@@ -11,14 +11,16 @@ url: "https://pschfr.github.io" # the base hostname & protocol for your site
 includes:
 - css
 - js
-- img
 - favicons
+- pages
 
 navigation:
 - text: Home
   url: /
 - text: Contact
   url: /contact/
+
+permalink: /:title/
 
 # for when building the contact page
 # http://mattgemmell.com/page-specific-assets-with-jekyll/
