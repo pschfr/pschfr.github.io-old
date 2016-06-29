@@ -5,8 +5,8 @@ tagline: web designer & developer
 email: yeppaul2@gmail.com
 description: Paul Schaefer is a designer and web developer living in the lovely Pittsburgh, PA
 
-baseurl: ""                     # the subpath of your site, e.g. /blog
-url: "https://pschfr.github.io" # the base hostname & protocol for your site
+baseurl: ""                     # the subpath of your site, e.g. "/blog" or ""
+url: "https://pschfr.github.io" # the base hostname & protocol for your (live) site
 
 includes:
 - css
@@ -14,17 +14,12 @@ includes:
 - favicons
 - pages
 
-navigation:
-- text: Home
-  url: /
-- text: Contact
-  url: /contact/
-
+# Assists with pages
 permalink: /:title/
 
-# for when building the contact page
+# for use when building the contact page
 # http://mattgemmell.com/page-specific-assets-with-jekyll/
 # http://www.tonysheng.com/howto/conditional-cta-jekyll/
 
-# Build settings
+# Build-specific settings
 markdown: kramdown
