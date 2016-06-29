@@ -2,7 +2,7 @@
 layout: page
 title: Colophon
 permalink: /colophon/
-page_is_page: true
+in_footer: true
 ---
 
 I will eventually write here a detailed write-up of how this site is made.
