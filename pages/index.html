@@ -22,7 +22,8 @@ in_footer: true
         {% for post in site.posts %}
             <li class="post">
                 <h2 class="grid__col--12-of-12 grid__col">{{ post.title }}</h2>
-                <div class="grid__col--12-of-12 grid__col">{{ post.content }}</div>
+                <div class="grid__col--3-of-4 grid__col">{{ post.content }}</div>
+                <div class="grid__col--1-of-4 grid__col"><img src="{{ post.image_path }}" alt="{{ post.title }}"></div>
             </li>
         {% endfor %}
     </ul>
