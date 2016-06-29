@@ -139,6 +139,14 @@ footer a:hover svg {
 	-moz-transform:    scale(1.25);
 	transform:         scale(1.25);
 }
+footer ul.page-list {
+	text-align: left;
+	line-height: 2;
+}
+footer ul.page-list a:hover {
+	text-decoration: underline;
+	color: inherit;
+}
 
 /* RESPONSIVENESS MAGIC */
 @media (max-width: 700px) {

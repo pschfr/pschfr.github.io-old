@@ -1,7 +1,13 @@
 <footer class="site-footer">
 <div class='grid container'>
 <div class='grid__col--1-of-3 grid__col'>
-
+<ul class="no-bullet page-list">
+{% for page in site.pages %}
+{% if page.page_is_page %}
+<li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
 </div>
 <div class='grid__col--1-of-3 grid__col'>
 Share with<br>
