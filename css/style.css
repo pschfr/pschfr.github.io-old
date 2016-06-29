@@ -1,11 +1,5 @@
-/*
-Theme Name: Paul
-Author: Paul Schaefer
-Author URI: https://paulmakesthe.net/
-Version: 4.2.0
-*/
-/* RESETS */
 @charset 'UTF-8';
+/* RESETS */
 html {
 	font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
@@ -23,8 +17,13 @@ html {
 
 /* TYPOGRAPHY */
 img { max-width: 100%; }
-a, a:visited { color: inherit; }
-a:hover      { color: blue; }
+a, a:visited, a svg {
+	-webkit-transition: all 0.25s;
+	-moz-transition:    all 0.25s;
+	transition:         all 0.25s;
+	color: inherit;
+}
+a:hover { color: blue; }
 a.call-out { text-decoration: none; }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Palatino Linotype', Georgia, serif;
@@ -43,6 +42,8 @@ ul.no-bullet {
 
 /* LAYOUT */
 header {
+	background-color: #999;
+	background: linear-gradient(to right bottom, #f2f2f2, #212121);;
 	position: relative;
 	height: 30vh;
 }
@@ -61,14 +62,13 @@ header div.wrap {
 }
 header h1 { margin: 0; }
 header span.amp { display: inline-block; }
-header a, header a:hover { border: none; }
 header a.arrow {
 	position: absolute;
 	text-align: center;
 	outline: none;
 	width: 100%;
 	bottom: 1%;
-	left: 0%;
+	left:   0%;
 }
 header a.home {
 	text-transform: uppercase;
@@ -78,7 +78,7 @@ header a.home {
 	font-size: 2.5rem;
 	color: inherit;
 	left: 0;
-	top: 0;
+	top:  0;
 }
 header a.arrow svg, header a.home svg {
 	height: 2.5rem;
@@ -126,7 +126,7 @@ footer a, footer a:hover {
 	text-decoration: none;
 	border: none;
 }
-footer .icon {
+footer svg {
 	margin: 1rem 0.5rem 2rem;
     display: inline-block;
     font-weight: normal;
@@ -134,13 +134,15 @@ footer .icon {
 	width:  2rem;
     fill:   #fff;
 }
+footer a:hover svg {
+	-webkit-transform: scale(1.25);
+	-moz-transform:    scale(1.25);
+	transform:         scale(1.25);
+}
 
 /* RESPONSIVENESS MAGIC */
 @media (max-width: 700px) {
-	.container {
-		max-width: 90%;
-		max-width: 90vw;
-	}
+	.container { max-width: 90%; }
 	.grid__col { padding-left: 0 !important; }
 	header div.wrap { font-size: 11vw; }
 	header h1 { margin: 0; }
@@ -152,5 +154,10 @@ footer .icon {
 		-webkit-column-count: 1;
 		-moz-column-count:    1;
 		column-count:         1;
+	}
+	footer a:hover svg {
+		-webkit-transform: none;
+		-moz-transform:    none;
+		transform:         none;
 	}
 }

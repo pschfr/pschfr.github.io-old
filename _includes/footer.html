@@ -5,14 +5,14 @@
 </div>
 <div class='grid__col--1-of-3 grid__col'>
 Share with<br>
-<a href='https://facebook.com/sharer/sharer.php?u={{ site.url | url_escape }}' target='_blank' class='js-social-share'>
-<svg class="icon icon-facebook"><use xlink:href="/symbol-defs.svg#icon-facebook"></use></svg>
+<a href='https://facebook.com/sharer/sharer.php?u={{ site.url | url_escape }}' target='_blank'>
+<svg><use xlink:href="/symbol-defs.svg#icon-facebook"></use></svg>
 </a>
-<a href='https://twitter.com/intent/tweet/?text=Paul%20Schaefer,%20digital%20artist%20and%20web%20developer&via=pschfr&url={{ site.url | url_escape }}' target='_blank' class='js-social-share'>
-<svg class="icon icon-twitter"><use xlink:href="/symbol-defs.svg#icon-twitter"></use></svg>
+<a href='https://twitter.com/intent/tweet/?text={{ site.title | url.escape }},%20{{ site.tagline | url.escape }}&via=pschfr&url={{ site.url | url_escape }}' target='_blank'>
+<svg><use xlink:href="/symbol-defs.svg#icon-twitter"></use></svg>
 </a>
-<a href='mailto:?to=%20&subject=Look%20at%20this%20rad%20website!&body={{ site.url | url_escape }}''>
-<svg class="icon icon-mail"><use xlink:href="/symbol-defs.svg#icon-mail"></use></svg>
+<a href='mailto:?to=%20&subject=%20&body={{ site.url | url_escape }}'>
+<svg><use xlink:href="/symbol-defs.svg#icon-mail"></use></svg>
 </a>
 </div>
 <div class='grid__col--1-of-3 grid__col'>
@@ -23,5 +23,6 @@ Beam me up<br>
 </div>
 </div>
 </footer>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-<script type="text/javascript" src="{{ "/js/main.js" | prepend: / }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+<script src="/js/zenscroll.min.js"></script>
+<script src="/js/main.js"></script>
