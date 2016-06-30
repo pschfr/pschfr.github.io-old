@@ -42,8 +42,6 @@ ul.no-bullet {
 
 /* LAYOUT */
 header {
-	background-color: #999;
-	background: linear-gradient(to bottom, #cecdd0, #836a9e);
 	position: relative;
 	height: 30vh;
 }

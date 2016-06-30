@@ -6,3 +6,6 @@ var pattern = Trianglify({
     y_colors: 'Purples'
 });
 document.getElementById('site_header').appendChild(pattern.canvas());
+
+// Tweaks ZenScroll's default speed
+zenscroll.setup(500);
