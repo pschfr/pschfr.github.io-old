@@ -23,3 +23,11 @@ includes:
 # for use when building the contact page later
 # http://mattgemmell.com/page-specific-assets-with-jekyll/
 # http://www.tonysheng.com/howto/conditional-cta-jekyll/
+
+# plugins to install later
+# https://github.com/github/pages-gem !!!!
+# https://github.com/jekyll/jekyll-gist
+# https://github.com/jekyll/jekyll-feed
+# https://github.com/jekyll/jekyll-mentions
+# https://github.com/jekyll/jekyll-seo-tag
+# https://github.com/jekyll/jekyll-sitemap
