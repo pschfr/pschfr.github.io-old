@@ -14,6 +14,9 @@ html {
 	margin: 0 auto;
 }
 .grid__col--centered { text-align: center; }
+.font-normal { font-weight: normal; }
+a.no-underline { text-decoration: none; }
+.large-margin { margin-bottom: 3rem; }
 
 /* TYPOGRAPHY */
 img { max-width: 100%; }
@@ -22,9 +25,9 @@ a, a:visited, a svg {
 	-moz-transition:    all 0.25s;
 	transition:         all 0.25s;
 	color: inherit;
+	border: none;
 }
 a:hover { color: blue; }
-a.call-out { text-decoration: none; }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Palatino Linotype', Georgia, serif;
 	line-height: 1;
@@ -58,7 +61,6 @@ header div.wrap {
 	top:  50%;
 }
 header h1 { margin: 0; }
-header h1, header h3 { font-weight: normal; }
 header span.amp { display: inline-block; }
 header a.arrow {
 	position: absolute;
@@ -87,12 +89,6 @@ section#about {
 	padding-top:    3rem;
 	padding-bottom: 3rem;
 }
-section#about div.columnar {
-	-webkit-column-count: 3;
-	-moz-column-count:    3;
-	column-count:         3;
-}
-section#about div.columnar p { padding-bottom: 1rem; }
 section#work ul.post-list li { margin-bottom:  3rem; }
 section#contact h3 {
 	font-weight: normal;
@@ -119,10 +115,6 @@ footer {
 	padding: 50px 0 0;
 	font-size: 0.8rem;
 	color: #ddd;
-}
-footer a, footer a:hover {
-	text-decoration: none;
-	border: none;
 }
 footer svg {
 	margin: 1rem 0.5rem 2rem;

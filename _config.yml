@@ -9,8 +9,7 @@ description: Paul Schaefer is a web designer and developer living in the lovely 
 # BUILD SETTINGS
 baseurl: ""                     # the subpath of your site, e.g. "/blog" or ""
 url: "https://pschfr.github.io" # the base hostname & protocol for your (live) site
-incremental: true               # enables the experimental feature that only re-builds edited posts
-permalink: /:title/             # assists with page URLs, displays as /contact/
+permalink: /:categories/:title/ # assists with page URLs, displays as /work/contact/
 
 # REQUIRED FILES
 includes:

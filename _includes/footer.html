@@ -4,27 +4,27 @@
 <ul class="no-bullet page-list">
 {% for page in site.pages %}
 {% if page.in_footer %}
-<li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+<li><a href="{{ page.permalink }}" class="no-underline">{{ page.title }}</a></li>
 {% endif %}
 {% endfor %}
 </ul>
 </div>
 <div class='grid__col--1-of-3 grid__col'>
 Share with<br>
-<a href='https://facebook.com/sharer/sharer.php?u={{ site.url | url_escape }}' target='_blank'>
+<a href='https://facebook.com/sharer/sharer.php?u={{ site.url | url_escape }}' target='_blank' class='no-underline'>
 <svg><use xlink:href="/symbol-defs.svg#icon-facebook"></use></svg>
 </a>
-<a href='https://twitter.com/intent/tweet/?text={{ site.title | url.escape }},%20{{ site.tagline | url.escape }}&via=pschfr&url={{ site.url | url_escape }}' target='_blank'>
+<a href='https://twitter.com/intent/tweet/?text={{ site.title | url.escape }},%20{{ site.tagline | url.escape }}&via=pschfr&url={{ site.url | url_escape }}' target='_blank' class='no-underline'>
 <svg><use xlink:href="/symbol-defs.svg#icon-twitter"></use></svg>
 </a>
-<a href='mailto:?to=%20&subject=%20&body={{ site.url | url_escape }}'>
+<a href='mailto:?to=%20&subject=%20&body={{ site.url | url_escape }}' class='no-underline'>
 <svg><use xlink:href="/symbol-defs.svg#icon-mail"></use></svg>
 </a>
 </div>
 <div class='grid__col--1-of-3 grid__col'>
 Beam me up<br>
-<a class='arrow' href='#'>
-<svg class="icon icon-arrow-up"><use xlink:href="/symbol-defs.svg#icon-arrow-up"></use></svg>
+<a class='arrow no-underline' href='#'>
+<svg><use xlink:href="/symbol-defs.svg#icon-arrow-up"></use></svg>
 </a>
 </div>
 </div>
