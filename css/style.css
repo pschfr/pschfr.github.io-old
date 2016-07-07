@@ -153,6 +153,11 @@ footer ul.page-list a:hover {
 		-moz-column-count:    1;
 		column-count:         1;
 	}
+	footer ul.page-list { text-align: center; }
+	footer ul.page-list li {
+		display: inline-block;
+		padding: 0 5% 2rem;
+	}
 	footer a:hover svg {
 		-webkit-transform: none;
 		-moz-transform:    none;
