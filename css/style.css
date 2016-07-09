@@ -59,6 +59,7 @@ header div.wrap {
 	font-size: 4vw;
 	left: 50%;
 	top:  50%;
+	color: white;
 }
 header h1 { margin: 0; }
 header span.amp { display: inline-block; }
@@ -83,7 +84,7 @@ header a.home {
 header a.arrow svg, header a.home svg {
 	height: 2.5rem;
 	width:  2.5rem;
-	fill: #222;
+	fill: white;
 }
 section#about {
 	padding-top:    3rem;
@@ -165,42 +166,19 @@ footer ul.page-list a:hover {
 	}
 }
 
-/* ANIMATION GOODNESS */
-/* originally authored by Dan Eden - https://github.com/daneden/animate.css/ */
-@-webkit-keyframes fadeInDown {
-	from {
-		opacity: 0;
-		-webkit-transform: translate3d(0, -100%, 0);
-		-moz-transform:    translate3d(0, -100%, 0);
-		transform:         translate3d(0, -100%, 0);
-	}
-
-	to {
-		opacity: 1;
-		-webkit-transform: none;
-		-moz-transform:    none;
-		transform:         none;
-	}
-}
-@keyframes fadeInDown {
-	from {
-		opacity: 0;
-		-webkit-transform: translate3d(0, -100%, 0);
-		-moz-transform:    translate3d(0, -100%, 0);
-		transform:         translate3d(0, -100%, 0);
-	}
-	to {
-		opacity: 1;
-		-webkit-transform: none;
-		-moz-transform:    none;
-		transform:         none;
-	}
-}
-.fadeInDown {
-	-webkit-animation: 0.75s ease-in-out 0.5s 1 both fadeInDown;
-	-moz-animation:    0.75s ease-in-out 0.5s 1 both fadeInDown;
-	animation:         0.75s ease-in-out 0.5s 1 both fadeInDown;
-	-webkit-transform-origin: center bottom;
-	-moz-transform-origin:    center bottom;
-	transform-origin:         center bottom;
-}
+/* Gradient backgrounds */
+.bg1  { background: linear-gradient(to right bottom, #2F2727, #1a82f7); }
+.bg2  { background: linear-gradient(to right bottom, #282175, #8ea77b); }
+.bg3  { background: linear-gradient(to right bottom, #1F1C2C, #928DAB); }
+.bg4  { background: linear-gradient(to right bottom, #ec7972, #7879c7); }
+.bg5  { background: linear-gradient(to right bottom, #c71d37, #1d63e6); }
+.bg6  { background: linear-gradient(to right bottom, #2bdcfe, #a807b1); }
+.bg7  { background: linear-gradient(to right bottom, #6111bc, #7c90ad); }
+.bg8  { background: linear-gradient(to right bottom, #348F50, #56B4D3); }
+.bg9  { background: linear-gradient(to right bottom, #7db1c2, #315d90); }
+.bg10 { background: linear-gradient(to right bottom, #cf353b, #29a39a); }
+.bg11 { background: linear-gradient(to right bottom, #6b64be, #e0c87d); }
+.bg12 { background: linear-gradient(to right bottom, #3d72b4, #525252); }
+.bg13 { background: linear-gradient(to right bottom, #517fa4, #243949); }
+.bg14 { background: linear-gradient(to right bottom, #FFA17F, #00223E); }
+.bg15 { background: linear-gradient(to right bottom, #360033, #0b8793); }

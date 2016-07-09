@@ -1,10 +1,14 @@
-<header id="site_header" class="site-header {% if page.url == "/" %}home{% endif %}">
+<header id="site_header" class="site-header {% if page.url == "/" %}home{% endif %} ">
+<script type="text/javascript">
+var rnd = document.getElementById('site_header');
+rnd.className += "bg" + Math.floor(Math.random() * (15 - 1 + 1) + 1);
+</script>
 <div class="wrap">
 {% if page.url == "/" %}
 <h1 class="site-title font-normal">{{ site.title }}</h1>
 <h3 class="site-tagline font-normal">web designer<span class="amp">&nbsp;&amp;&nbsp;</span>developer</h3>
 </div>
-<a class='arrow fadeInDown' href='#about'>
+<a class='arrow' href='#about'>
 <svg><use xlink:href="/symbol-defs.svg#icon-arrow-down"></use></svg>
 </a>
 {% else %}
