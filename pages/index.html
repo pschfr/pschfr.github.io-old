@@ -9,9 +9,13 @@ in_footer: true
     <h3 class="grid__col--12-of-12 grid__col--centered grid__col font-normal large-margin">I'm an independent developer and designer with a passion for clean &amp; efficient websites.</h3>
 
     {% for item in site.categories['process'] %}
-        <div class="grid__col--1-of-4 grid__col">
-            <img src="{{ item.image_path }}" alt="{{ item.title }}" />
-            <h2>{{ item.title }}</h2>
+        <div class="grid__col--1-of-4 grid__col large-margin">
+            {% if item.image_path %}
+              <img src="{{ item.image_path }}" alt="{{ item.title }}" class="grid__col--centered" />
+            {% elsif item.svg_icon %}
+              <svg class="process-icon"><use xlink:href="/symbol-defs.svg#icon-{{ item.svg_icon }}"></use></svg>
+            {% endif %}
+            <div class="grid__col--centered text-upper process-title">{{ item.title }}</div>
             <div>{{ item.content }}</div>
         </div>
     {% endfor %}
@@ -32,5 +36,5 @@ in_footer: true
 </section>
 
 <section id="contact" class="grid__col--centered grid__col--12-of-12 grid__col">
-    <h3>Interested in having me work on your project? <a class="no-underline" href="/contact">Get in touch <svg class="icon icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-arrow-right"></use></svg></a></h3>
+    <h3>Interested in having me work on your project? <a class="no-underline" href="/contact">Get in touch <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a></h3>
 </section>

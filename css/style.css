@@ -15,8 +15,18 @@ html {
 }
 .grid__col--centered { text-align: center; }
 .font-normal { font-weight: normal; }
+.text-upper { text-transform: uppercase; }
 a.no-underline { text-decoration: none; }
 .large-margin { margin-bottom: 3rem; }
+.process-icon {
+	margin: 0 auto;
+	display: block;
+	width: 150px;
+}
+.process-title {
+	font-size: 18px;
+	letter-spacing: 3px;
+}
 
 /* TYPOGRAPHY */
 img { max-width: 100%; }
@@ -91,10 +101,7 @@ header a.home svg {
 	width:  1.5rem;
 	fill: white;
 }
-section#about {
-	padding-top:    3rem;
-	padding-bottom: 3rem;
-}
+h1#about { padding-top: 3rem; }
 section#work ul.post-list li { margin-bottom:  3rem; }
 section#contact h3 {
 	font-weight: normal;
@@ -113,7 +120,6 @@ section#contact h3 a svg {
 }
 section#contact h3 a:hover svg { fill: blue; }
 footer {
-	text-transform: uppercase;
 	background-color: #111;
 	position: relative;
 	text-align: center;

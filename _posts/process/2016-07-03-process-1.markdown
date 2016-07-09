@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Research"
+date:   2016-07-03 12:23:43 -0400
+categories: process
+svg_icon: "search"
+---
