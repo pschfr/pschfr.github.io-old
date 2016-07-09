@@ -19,9 +19,10 @@ html {
 a.no-underline { text-decoration: none; }
 .large-margin { margin-bottom: 3rem; }
 .process-icon {
-	margin: 0 auto;
+	margin: 1rem auto;
 	display: block;
 	width: 150px;
+	fill: #222;
 }
 .process-title {
 	font-size: 18px;
@@ -80,6 +81,11 @@ header a.arrow {
 	width: 100%;
 	bottom: 1%;
 	left:   0%;
+}
+header a.arrow:hover svg {
+	-webkit-transform: scale(1.25);
+	-moz-transform:    scale(1.25);
+	transform:         scale(1.25);
 }
 header a.home {
 	text-transform: uppercase;
@@ -170,14 +176,14 @@ footer ul.page-list a:hover {
 		display: inline-block;
 		padding: 0 5% 2rem;
 	}
-	footer a:hover svg {
+	header a:hover svg, footer a:hover svg {
 		-webkit-transform: none;
 		-moz-transform:    none;
 		transform:         none;
 	}
 }
 
-/* FADE IN ANIMATION */
+/* ANIMATION GOODNESS */
 /* https://daneden.github.io/animate.css/ */
 @-webkit-keyframes fade-in {
   from { opacity: 0; }
@@ -216,7 +222,6 @@ footer ul.page-list a:hover {
     transform:         none;
   }
 }
-
 .fade-in {
   -webkit-animation: 0.75s ease-in-out 0.75s 1 both fade-in;
 	-moz-animation:    0.75s ease-in-out 0.75s 1 both fade-in;
@@ -228,7 +233,7 @@ footer ul.page-list a:hover {
 	animation:         0.75s ease-in-out 2s 1 both fade-in-down;
 }
 
-/* Gradient backgrounds */
+/* GRADIENT BACKGROUNDS */
 .bg1  { background: url('/images/dot.png'), linear-gradient(to right bottom, #2F2727, #1a82f7); }
 .bg2  { background: url('/images/dot.png'), linear-gradient(to right bottom, #282175, #8ea77b); }
 .bg3  { background: url('/images/dot.png'), linear-gradient(to right bottom, #1F1C2C, #928DAB); }
