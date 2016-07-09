@@ -25,6 +25,17 @@
 <meta name="msapplication-TileColor" content="#222">
 <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
 <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<meta property="og:image" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}images/screenshot.png">
+<meta property="og:title" content="{{ site.title | escape }}, {{ site.tagline | escape }}">
+<meta property="og:description" content="{{ site.title | escape }}, {{ site.tagline | escape }} living in Pittsburgh, PA">
+<meta name="twitter:card" content="photo">
+<meta name="twitter:site" content="@pschfr">
+<meta name="twitter:creator" content="@pschfr">
+<meta name="twitter:title" content="{{ site.title | escape }}, {{ site.tagline | escape }}">
+<meta name="twitter:description" content="{{ site.title | escape }}, {{ site.tagline | escape }} living in Pittsburgh, PA.">
+<meta name="twitter:image:src" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}images/screenshot.png">
+<meta name="twitter:domain" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toast-css/1.1.0/grid.min.css">
 <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
