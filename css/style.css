@@ -17,7 +17,8 @@ html {
 .font-normal { font-weight: normal; }
 .text-upper { text-transform: uppercase; }
 a.no-underline { text-decoration: none; }
-.large-margin { margin-bottom: 3rem; }
+.large-margin { margin-bottom: 10rem; }
+.text-right { text-align: right; }
 .process-icon {
 	margin: 1rem auto;
 	display: block;
@@ -108,6 +109,17 @@ header a.home svg {
 	fill: white;
 }
 h1#about { padding-top: 3rem; }
+.process-icon {
+	margin: 1rem auto;
+	display: block;
+	width: 150px;
+	fill: #222;
+}
+.process-title {
+	font-size: 18px;
+	letter-spacing: 3px;
+}
+
 section#work ul.post-list li { margin-bottom:  3rem; }
 section#contact h3 {
 	font-weight: normal;
@@ -165,11 +177,6 @@ footer ul.page-list a:hover {
 	header span.amp {
 		margin: 0 auto;
 		display: block;
-	}
-	section#about div.columnar {
-		-webkit-column-count: 1;
-		-moz-column-count:    1;
-		column-count:         1;
 	}
 	footer ul.page-list { text-align: center; }
 	footer ul.page-list li {

@@ -6,7 +6,7 @@ in_footer: true
 ---
 <section>
     <h1 class="grid__col--12-of-12 grid__col--centered grid__col page-heading" id="about">Hello world!</h1>
-    <h3 class="grid__col--12-of-12 grid__col--centered grid__col font-normal large-margin">I'm an independent developer and designer with a passion for clean &amp; efficient websites.</h3>
+    <h3 class="grid__col--12-of-12 grid__col--centered grid__col font-normal">I'm an independent developer and designer with a passion for clean &amp; efficient websites.</h3>
 
     {% for item in site.categories['process'] %}
         <div class="grid__col--1-of-4 grid__col large-margin">
@@ -21,18 +21,32 @@ in_footer: true
     {% endfor %}
 </section>
 
-<section id="work">
-    <h3 class="grid__col--12-of-12 grid__col">My work</h3>
+<section id="work" class="large-margin">
+    <h3 class="grid__col--12-of-12 grid__col">Featured work</h3>
 
     <ul class="post-list no-bullet">
         {% for item in site.categories['work'] %}
             <li class="post">
-                <h2 class="grid__col--12-of-12 grid__col"><a href="{{ item.url }}">{{ item.title }}</a></h2>
+                <h2 class="grid__col--12-of-12 grid__col">{{ item.title }}</h2>
                 <div class="grid__col--3-of-4 grid__col">{{ item.content }}</div>
                 <div class="grid__col--1-of-4 grid__col"><img src="{{ item.image_path }}" alt="{{ item.title }}"></div>
             </li>
         {% endfor %}
     </ul>
+</section>
+
+<section id="experiments" class="text-right">
+  <h3 class="grid__col--12-of-12 grid__col">My experiments</h3>
+
+  <ul class="post-list no-bullet">
+    {% for item in site.categories['experiments'] %}
+      <li class="post">
+        <h2 class="grid__col--12-of-12 grid__col">{{ item.title }}</h2>
+        <div class="grid__col--1-of-4 grid__col"><img src="{{ item.image_path }}" alt="{{ item.title }}"></div>
+        <div class="grid__col--3-of-4 grid__col">{{ item.content }}</div>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <section id="contact" class="grid__col--centered grid__col--12-of-12 grid__col">
