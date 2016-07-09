@@ -3,16 +3,16 @@
 var rnd = document.getElementById('site_header');
 rnd.className += "bg" + Math.floor(Math.random() * (15 - 1 + 1) + 1);
 </script>
-<div class="wrap">
+<div class="wrap fade-in">
 {% if page.url == "/" %}
 <h1 class="site-title font-normal">{{ site.title }}</h1>
 <h3 class="site-tagline font-normal">web designer<span class="amp">&nbsp;&amp;&nbsp;</span>developer</h3>
 </div>
-<a class='arrow' href='#about'>
+<a class='arrow fade-in-delayed' href='#about'>
 <svg><use xlink:href="/symbol-defs.svg#icon-arrow-down"></use></svg>
 </a>
 {% else %}
-<h1 class="site-title">{{ page.title }}</h1>
+<h1 class="site-title font-normal">{{ page.title }}</h1>
 </div>
 <a href="/" class="home"><svg class="icon icon-home"><use xlink:href="/symbol-defs.svg#icon-home"></use></svg> Home</a>
 {% endif %}

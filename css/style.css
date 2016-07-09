@@ -47,6 +47,7 @@ ul.no-bullet {
 header {
 	position: relative;
 	height: 30vh;
+	color: white;
 }
 header.home { height: 100vh; }
 header div.wrap {
@@ -59,7 +60,6 @@ header div.wrap {
 	font-size: 4vw;
 	left: 50%;
 	top:  50%;
-	color: white;
 }
 header h1 { margin: 0; }
 header span.amp { display: inline-block; }
@@ -76,14 +76,19 @@ header a.home {
 	padding: 1rem 0 0 1rem;
 	text-decoration: none;
 	position: absolute;
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 	color: inherit;
 	left: 0;
 	top:  0;
 }
-header a.arrow svg, header a.home svg {
+header a.arrow svg {
 	height: 2.5rem;
 	width:  2.5rem;
+	fill: white;
+}
+header a.home svg {
+	height: 1.5rem;
+	width:  1.5rem;
 	fill: white;
 }
 section#about {
@@ -164,6 +169,57 @@ footer ul.page-list a:hover {
 		-moz-transform:    none;
 		transform:         none;
 	}
+}
+
+/* FADE IN ANIMATION */
+/* https://daneden.github.io/animate.css/ */
+@-webkit-keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fade-in {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+@-webkit-keyframes fade-in-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+		-moz-transform:    translate3d(0, -100%, 0);
+    transform:         translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+		-moz-transform:    none;
+    transform:         none;
+  }
+}
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+		-moz-transform:    translate3d(0, -100%, 0);
+    transform:         translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+		-moz-transform:    none;
+    transform:         none;
+  }
+}
+
+.fade-in {
+  -webkit-animation: 0.5s ease-in-out 0.5s 1 both fade-in;
+	-moz-animation:    0.5s ease-in-out 0.5s 1 both fade-in;
+  animation:         0.5s ease-in-out 0.5s 1 both fade-in;
+}
+.fade-in-delayed {
+	-webkit-animation: 0.5s ease-in-out 1.5s 1 both fade-in-down;
+	-moz-animation:    0.5s ease-in-out 1.5s 1 both fade-in-down;
+	animation:         0.5s ease-in-out 1.5s 1 both fade-in-down;
 }
 
 /* Gradient backgrounds */
