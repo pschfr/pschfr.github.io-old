@@ -1,7 +1,7 @@
-<header id="site_header" class="site-header {% if page.url == "/" %}home{% endif %} ">
+<header id="site_header" class="site-header {% if page.url == "/" %}home{% endif %} bg">
 <script type="text/javascript">
-var rnd = document.getElementById('site_header');
-rnd.className += "bg" + Math.floor(Math.random() * (15 - 1 + 1) + 1);
+var header = document.getElementById('site_header');
+header.className += Math.floor(Math.random() * (15 - 1 + 1) + 1);
 </script>
 <div class="wrap fade-in">
 {% if page.url == "/" %}

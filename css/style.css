@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 /* RESETS */
 html {
-	font-family: 'Roboto', 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 	box-sizing: border-box;
 	color: #222;
 }
@@ -13,22 +13,22 @@ html {
 	max-width:   75vw;
 	margin: 0 auto;
 }
+
 .grid__col--centered { text-align: center; }
 .font-normal { font-weight: normal; }
 .text-upper { text-transform: uppercase; }
-a.no-underline { text-decoration: none; }
-.large-margin { margin-bottom: 10rem; }
+.no-underline { text-decoration: none; }
 .text-right { text-align: right; }
-.process-icon {
-	margin: 1rem auto;
-	display: block;
-	width: 150px;
-	fill: #222;
-}
-.process-title {
-	font-size: 18px;
-	letter-spacing: 3px;
-}
+
+.small-margin { margin-bottom:   3rem; }
+.large-margin { margin-bottom:  10rem; }
+.small-margin-top { margin-top:  3rem; }
+.large-margin-top { margin-top: 10rem; }
+
+.small-padding { padding-bottom:   3rem; }
+.large-padding { padding-bottom:  10rem; }
+.small-padding-top { padding-top:  3rem; }
+.large-padding-top { padding-top: 10rem; }
 
 /* TYPOGRAPHY */
 img { max-width: 100%; }
@@ -148,11 +148,11 @@ footer {
 }
 footer svg {
 	margin: 1rem 0.5rem 2rem;
-    display: inline-block;
-    font-weight: normal;
+  display: inline-block;
+  font-weight: normal;
 	height: 2rem;
-	width:  2rem;
-    fill:   #fff;
+	width: 2rem;
+	fill: white;
 }
 footer a:hover svg {
 	-webkit-transform: scale(1.25);
@@ -190,13 +190,11 @@ footer ul.page-list a:hover {
 	}
 }
 
-/* ANIMATION GOODNESS */
-/* https://daneden.github.io/animate.css/ */
+/* ANIMATION GOODNESS FROM https://daneden.github.io/animate.css/ */
 @-webkit-keyframes fade-in {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-
 @keyframes fade-in {
 	from { opacity: 0; }
 	to   { opacity: 1; }
@@ -241,18 +239,18 @@ footer ul.page-list a:hover {
 }
 
 /* GRADIENT BACKGROUNDS */
-.bg1  { background: url('/images/dot.png'), linear-gradient(to right bottom, #2F2727, #1a82f7); }
-.bg2  { background: url('/images/dot.png'), linear-gradient(to right bottom, #282175, #8ea77b); }
-.bg3  { background: url('/images/dot.png'), linear-gradient(to right bottom, #1F1C2C, #928DAB); }
-.bg4  { background: url('/images/dot.png'), linear-gradient(to right bottom, #ec7972, #7879c7); }
-.bg5  { background: url('/images/dot.png'), linear-gradient(to right bottom, #c71d37, #1d63e6); }
-.bg6  { background: url('/images/dot.png'), linear-gradient(to right bottom, #2bdcfe, #a807b1); }
-.bg7  { background: url('/images/dot.png'), linear-gradient(to right bottom, #6111bc, #7c90ad); }
-.bg8  { background: url('/images/dot.png'), linear-gradient(to right bottom, #348F50, #56B4D3); }
-.bg9  { background: url('/images/dot.png'), linear-gradient(to right bottom, #7db1c2, #315d90); }
-.bg10 { background: url('/images/dot.png'), linear-gradient(to right bottom, #cf353b, #29a39a); }
-.bg11 { background: url('/images/dot.png'), linear-gradient(to right bottom, #6b64be, #e0c87d); }
-.bg12 { background: url('/images/dot.png'), linear-gradient(to right bottom, #3d72b4, #525252); }
-.bg13 { background: url('/images/dot.png'), linear-gradient(to right bottom, #517fa4, #243949); }
-.bg14 { background: url('/images/dot.png'), linear-gradient(to right bottom, #FFA17F, #00223E); }
-.bg15 { background: url('/images/dot.png'), linear-gradient(to right bottom, #360033, #0b8793); }
+.bg1  { background: linear-gradient(to right bottom, #2F2727, #1a82f7); }
+.bg2  { background: linear-gradient(to right bottom, #282175, #8ea77b); }
+.bg3  { background: linear-gradient(to right bottom, #1F1C2C, #928DAB); }
+.bg4  { background: linear-gradient(to right bottom, #ec7972, #7879c7); }
+.bg5  { background: linear-gradient(to right bottom, #c71d37, #1d63e6); }
+.bg6  { background: linear-gradient(to right bottom, #2bdcfe, #a807b1); }
+.bg7  { background: linear-gradient(to right bottom, #6111bc, #7c90ad); }
+.bg8  { background: linear-gradient(to right bottom, #348F50, #56B4D3); }
+.bg9  { background: linear-gradient(to right bottom, #7db1c2, #315d90); }
+.bg10 { background: linear-gradient(to right bottom, #cf353b, #29a39a); }
+.bg11 { background: linear-gradient(to right bottom, #6b64be, #e0c87d); }
+.bg12 { background: linear-gradient(to right bottom, #3d72b4, #525252); }
+.bg13 { background: linear-gradient(to right bottom, #517fa4, #243949); }
+.bg14 { background: linear-gradient(to right bottom, #FFA17F, #00223E); }
+.bg15 { background: linear-gradient(to right bottom, #360033, #0b8793); }

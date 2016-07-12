@@ -4,12 +4,14 @@ title: "Home"
 permalink: "/"
 in_footer: true
 ---
-<section>
-    <h1 class="grid__col--12-of-12 grid__col--centered grid__col page-heading" id="about">Hello world!</h1>
-    <h3 class="grid__col--12-of-12 grid__col--centered grid__col font-normal">I'm an independent developer and designer with a passion for clean &amp; efficient websites.</h3>
+<section id="about" class="large-margin">
+    <div class="grid__col--12-of-12 grid__col--centered grid__col small-margin small-padding-top">
+      <h1 class="page-heading">Hello world!</h1>
+      <h3 class="font-normal">I'm an independent developer and designer with a passion for clean &amp; efficient websites.</h3>
+    </div>
 
     {% for item in site.categories['process'] %}
-        <div class="grid__col--1-of-4 grid__col large-margin">
+        <div class="grid__col--1-of-4 grid__col">
             {% if item.image_path %}
               <img src="{{ item.image_path }}" alt="{{ item.title }}" class="grid__col--centered" />
             {% elsif item.svg_icon %}
@@ -21,13 +23,26 @@ in_footer: true
     {% endfor %}
 </section>
 
+<section id="what" class="large-margin">
+  <div class="grid__col--12-of-12 grid__col">
+    <h1 class="section-heading font-normal">Wait, wha?</h1>
+  </div>
+  <div class="grid__col--3-of-4 grid__col">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a est ut erat dignissim suscipit. Vestibulum sit amet nibh nulla. Nulla facilisi. Mauris auctor, sem nec auctor commodo, libero magna tincidunt magna, sed bibendum nunc quam sit amet risus. Curabitur mattis malesuada dignissim. Donec dapibus mollis lectus, nec scelerisque urna tincidunt eget. In lorem risus, dignissim in congue vitae, varius ac ex. Nunc vitae lacinia tellus. Mauris id bibendum eros. Morbi viverra dui mi, eget mollis sem placerat et.</p>
+    <p>Praesent et purus at lorem consequat malesuada. Cras magna mauris, posuere vitae urna non, pulvinar venenatis neque. Phasellus eu odio nunc. Donec placerat porta nulla, ut rutrum nulla vehicula ac. Morbi ut sem quis dolor lacinia malesuada vitae vehicula nibh. Sed a purus vitae sapien elementum tempor. Integer pretium ligula quam. Vivamus eu finibus dui. Donec scelerisque non mi eu lobortis. Curabitur suscipit efficitur metus, sed efficitur lacus.</p>
+  </div>
+  <div class="grid__col--1-of-4 grid__col">
+    <img src="/images/me.jpg" alt="This is my face." class="grid__col--centered" />
+  </div>
+</section>
+
 <section id="work" class="large-margin">
     <h3 class="grid__col--12-of-12 grid__col">Featured work</h3>
 
     <ul class="post-list no-bullet">
         {% for item in site.categories['work'] %}
             <li class="post">
-                <h2 class="grid__col--12-of-12 grid__col">{{ item.title }}</h2>
+                <h2 class="grid__col--12-of-12 grid__col font-normal">{{ item.title }}</h2>
                 <div class="grid__col--3-of-4 grid__col">{{ item.content }}</div>
                 <div class="grid__col--1-of-4 grid__col"><img src="{{ item.image_path }}" alt="{{ item.title }}"></div>
             </li>
@@ -41,7 +56,7 @@ in_footer: true
   <ul class="post-list no-bullet">
     {% for item in site.categories['experiments'] %}
       <li class="post">
-        <h2 class="grid__col--12-of-12 grid__col">{{ item.title }}</h2>
+        <h2 class="grid__col--12-of-12 grid__col font-normal">{{ item.title }}</h2>
         <div class="grid__col--1-of-4 grid__col"><img src="{{ item.image_path }}" alt="{{ item.title }}"></div>
         <div class="grid__col--3-of-4 grid__col">{{ item.content }}</div>
       </li>
