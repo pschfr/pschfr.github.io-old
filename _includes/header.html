@@ -1,13 +1,15 @@
 <header id="top" class="site-header {% if page.url == "/" %}home{% endif %}">
-<div class="wrap fade-in">
 {% if page.url == "/" %}
+<div class="wrap fade-in">
 <h1 class="site-title font-normal">{{ site.title }}</h1>
 <h3 class="site-tagline font-normal">web designer<span class="amp">&nbsp;&amp;&nbsp;</span>developer</h3>
 </div>
 <a class='arrow fade-in-delayed' href='#about'>
 <svg><use xlink:href="/symbol-defs.svg#icon-chevron-thin-down"></use></svg>
 </a>
+</div>
 {% else %}
+<div class="wrap">
 <h1 class="site-title font-normal">{{ page.title }}</h1>
 </div>
 <a href="/" class="home"><svg><use xlink:href="/symbol-defs.svg#icon-chevron-thin-left"></use></svg> Home</a>

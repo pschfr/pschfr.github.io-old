@@ -40,6 +40,7 @@ a, a:visited, a svg {
 	border: none;
 }
 a:hover { color: blue; }
+a:hover svg { fill: blue; }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Palatino Linotype', Georgia, serif;
 	line-height: 1;
@@ -123,7 +124,7 @@ header a.home svg {
 }
 
 .post-list .post {
-	height: 30rem;
+	height: 40rem;
 	width: 85%;
 }
 .post-list .post img {
@@ -151,9 +152,7 @@ section#contact h3 a {
 section#contact h3 a svg {
 	height: 1.25rem;
 	width:  1.25rem;
-	fill: #222;
 }
-section#contact h3 a:hover svg { fill: blue; }
 footer {
 	background-color: #111;
 	position: relative;
@@ -175,6 +174,7 @@ footer a:hover svg {
 	-webkit-transform: scale(1.25);
 	-moz-transform:    scale(1.25);
 	transform:         scale(1.25);
+	fill: white;
 }
 footer ul.page-list {
 	text-align: left;
@@ -194,6 +194,11 @@ footer ul.page-list a:hover {
 	header span.amp {
 		margin: 0 auto;
 		display: block;
+	}
+	.post-list .post {
+		height: auto;
+		width: 100%;
+		margin-bottom: 3rem;
 	}
 	footer ul.page-list { text-align: center; }
 	footer ul.page-list li {

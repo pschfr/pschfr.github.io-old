@@ -36,7 +36,7 @@ in_footer: true
   </div>
 </section>
 
-<section id="work" class="large-margin">
+<section id="work">
   <div class="grid__col--1-of-2 grid__col">
     <h3>Featured work</h3>
 
@@ -45,7 +45,7 @@ in_footer: true
         <li class="post">
           <h2 class="font-normal">{{ item.title }}</h2>
           <img src="{{ item.image_path }}" alt="{{ item.title }}" class="small-margin" />
-          <div>{{ item.content }}</div>
+          {{ item.content }}
           <a class="no-underline" href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a>
         </li>
       {% endfor %}
@@ -60,7 +60,7 @@ in_footer: true
         <li class="post">
           <h2 class="font-normal">{{ item.title }}</h2>
           <img src="{{ item.image_path }}" alt="{{ item.title }}" class="small-margin" />
-          <div>{{ item.content }}</div>
+          {{ item.content }}
           <a class="no-underline" href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a>
         </li>
       {% endfor %}
