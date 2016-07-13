@@ -37,31 +37,35 @@ in_footer: true
 </section>
 
 <section id="work" class="large-margin">
-    <h3 class="grid__col--12-of-12 grid__col">Featured work</h3>
+  <div class="grid__col--1-of-2 grid__col">
+    <h3>Featured work</h3>
 
-    <ul class="post-list no-bullet">
-        {% for item in site.categories['work'] %}
-            <li class="post">
-                <h2 class="grid__col--12-of-12 grid__col font-normal">{{ item.title }}</h2>
-                <div class="grid__col--3-of-4 grid__col">{{ item.content }}</div>
-                <div class="grid__col--1-of-4 grid__col"><img src="{{ item.image_path }}" alt="{{ item.title }}"></div>
-            </li>
-        {% endfor %}
+    <ul class="post-list no-bullet small-margin">
+      {% for item in site.categories['work'] %}
+        <li class="post">
+          <h2 class="font-normal">{{ item.title }}</h2>
+          <img src="{{ item.image_path }}" alt="{{ item.title }}" class="small-margin" />
+          <div>{{ item.content }}</div>
+          <a class="no-underline" href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a>
+        </li>
+      {% endfor %}
     </ul>
-</section>
+  </div>
 
-<section id="experiments" class="text-right">
-  <h3 class="grid__col--12-of-12 grid__col">My experiments</h3>
+  <div class="grid__col--1-of-2 grid__col">
+    <h3>My experiments</h3>
 
-  <ul class="post-list no-bullet">
-    {% for item in site.categories['experiments'] %}
-      <li class="post">
-        <h2 class="grid__col--12-of-12 grid__col font-normal">{{ item.title }}</h2>
-        <div class="grid__col--1-of-4 grid__col"><img src="{{ item.image_path }}" alt="{{ item.title }}"></div>
-        <div class="grid__col--3-of-4 grid__col">{{ item.content }}</div>
-      </li>
-    {% endfor %}
-  </ul>
+    <ul class="post-list no-bullet small-margin">
+      {% for item in site.categories['experiments'] %}
+        <li class="post">
+          <h2 class="font-normal">{{ item.title }}</h2>
+          <img src="{{ item.image_path }}" alt="{{ item.title }}" class="small-margin" />
+          <div>{{ item.content }}</div>
+          <a class="no-underline" href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </section>
 
 <section id="contact" class="grid__col--centered grid__col--12-of-12 grid__col">

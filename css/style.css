@@ -122,7 +122,22 @@ header a.home svg {
 	letter-spacing: 3px;
 }
 
-section#work ul.post-list li { margin-bottom:  3rem; }
+.post-list .post {
+	height: 30rem;
+	width: 85%;
+}
+.post-list .post img {
+	max-height: 100%;
+	max-width:  100%;
+	height:    200px;
+	display:   block;
+}
+.post-list .post a svg {
+	height: 18px;
+	width: 18px;
+	vertical-align: middle;
+}
+
 section#contact h3 {
 	font-weight: normal;
 	font-size: 1.75rem;
@@ -201,41 +216,13 @@ footer ul.page-list a:hover {
 	from { opacity: 0; }
 	to   { opacity: 1; }
 }
-@-webkit-keyframes fade-in-down {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-		-moz-transform:    translate3d(0, -100%, 0);
-    transform:         translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-		-moz-transform:    none;
-    transform:         none;
-  }
-}
-@keyframes fade-in-down {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-		-moz-transform:    translate3d(0, -100%, 0);
-    transform:         translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-		-moz-transform:    none;
-    transform:         none;
-  }
-}
 .fade-in {
-  -webkit-animation: 0.75s ease-in-out 0.75s 1 both fade-in;
-	-moz-animation:    0.75s ease-in-out 0.75s 1 both fade-in;
-  animation:         0.75s ease-in-out 0.75s 1 both fade-in;
+  -webkit-animation: 0.5s ease-in-out 0.75s 1 both fade-in;
+	-moz-animation:    0.5s ease-in-out 0.75s 1 both fade-in;
+  animation:         0.5s ease-in-out 0.75s 1 both fade-in;
 }
 .fade-in-delayed {
-	-webkit-animation: 0.75s ease-in-out 2s 1 both fade-in-down;
-	-moz-animation:    0.75s ease-in-out 2s 1 both fade-in-down;
-	animation:         0.75s ease-in-out 2s 1 both fade-in-down;
+	-webkit-animation: 0.5s ease-in-out 2s 1 both fade-in;
+	-moz-animation:    0.5s ease-in-out 2s 1 both fade-in;
+	animation:         0.5s ease-in-out 2s 1 both fade-in;
 }
