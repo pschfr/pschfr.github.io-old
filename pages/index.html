@@ -24,12 +24,8 @@ in_footer: true
 </section>
 
 <section id="what" class="large-margin">
-  <div class="grid__col--12-of-12 grid__col">
-    <h1 class="section-heading font-normal">Wait, wha?</h1>
-  </div>
   <div class="grid__col--3-of-4 grid__col">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a est ut erat dignissim suscipit. Vestibulum sit amet nibh nulla. Nulla facilisi. Mauris auctor, sem nec auctor commodo, libero magna tincidunt magna, sed bibendum nunc quam sit amet risus. Curabitur mattis malesuada dignissim. Donec dapibus mollis lectus, nec scelerisque urna tincidunt eget. In lorem risus, dignissim in congue vitae, varius ac ex. Nunc vitae lacinia tellus. Mauris id bibendum eros. Morbi viverra dui mi, eget mollis sem placerat et.</p>
-    <p>Praesent et purus at lorem consequat malesuada. Cras magna mauris, posuere vitae urna non, pulvinar venenatis neque. Phasellus eu odio nunc. Donec placerat porta nulla, ut rutrum nulla vehicula ac. Morbi ut sem quis dolor lacinia malesuada vitae vehicula nibh. Sed a purus vitae sapien elementum tempor. Integer pretium ligula quam. Vivamus eu finibus dui. Donec scelerisque non mi eu lobortis. Curabitur suscipit efficitur metus, sed efficitur lacus.</p>
+    <p><strong class="text-upper text-large">Here's some more words about me.</strong> Consectetur adipiscing elit. Nulla a est ut erat dignissim suscipit. Vestibulum sit amet nibh nulla. Nulla facilisi. Mauris auctor, sem nec auctor commodo, libero magna tincidunt magna, sed bibendum nunc quam sit amet risus. Curabitur mattis malesuada dignissim. Donec dapibus mollis lectus, nec scelerisque urna tincidunt eget. In lorem risus, dignissim in congue vitae, varius ac ex. Nunc vitae lacinia tellus. Mauris id bibendum eros. Morbi viverra dui mi, eget mollis sem placerat et.</p>
   </div>
   <div class="grid__col--1-of-4 grid__col">
     <img src="/images/me.jpg" alt="This is my face." class="grid__col--centered" />
@@ -37,37 +33,31 @@ in_footer: true
 </section>
 
 <section id="work">
-  <div class="grid__col--1-of-2 grid__col">
-    <h3>Featured work</h3>
+    <h3 class="grid__col--12-of-12 grid__col">Featured work</h3>
+    <div class="post-list no-bullet large-margin">
+        {% for item in site.categories['work'] %}
+            <div class="post grid__col--1-of-2 grid__col">
+                <h2 class="font-normal">{{ item.title }}</h2>
+                <img src="{{ item.image_path }}" alt="{{ item.title }}" class="small-margin" />
+                {{ item.content }}
+                <a class="no-underline" href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a>
+            </div>
+        {% endfor %}
+    </div>
 
-    <ul class="post-list no-bullet small-margin">
-      {% for item in site.categories['work'] %}
-        <li class="post">
-          <h2 class="font-normal">{{ item.title }}</h2>
-          <img src="{{ item.image_path }}" alt="{{ item.title }}" class="small-margin" />
-          {{ item.content }}
-          <a class="no-underline" href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="grid__col--1-of-2 grid__col">
-    <h3>My experiments</h3>
-
-    <ul class="post-list no-bullet small-margin">
-      {% for item in site.categories['experiments'] %}
-        <li class="post">
-          <h2 class="font-normal">{{ item.title }}</h2>
-          <img src="{{ item.image_path }}" alt="{{ item.title }}" class="small-margin" />
-          {{ item.content }}
-          <a class="no-underline" href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+    <h3 class="grid__col--12-of-12 grid__col">My experiments</h3>
+    <div class="post-list no-bullet large-margin">
+        {% for item in site.categories['experiments'] %}
+            <div class="post grid__col--1-of-2 grid__col">
+                <h2 class="font-normal">{{ item.title }}</h2>
+                <img src="{{ item.image_path }}" alt="{{ item.title }}" class="small-margin" />
+                {{ item.content }}
+                <a class="no-underline" href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a>
+            </div>
+        {% endfor %}
+    </div>
 </section>
 
 <section id="contact" class="grid__col--centered grid__col--12-of-12 grid__col">
-    <h3>Interested in having me work on your project? <a class="no-underline" href="/contact">Get in touch <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a></h3>
+    <h3 class="small-margin">Interested in having me work on your project? <a class="no-underline" href="/contact">Get in touch <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a></h3>
 </section>
