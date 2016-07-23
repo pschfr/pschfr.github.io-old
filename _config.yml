@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 # SITE VARIABLES
 title: Paul Schaefer
-tagline: web designer & developer
+tagline: web designer and developer
 email: yeppaul2@gmail.com
 description: Paul Schaefer is a web designer and developer living in the lovely Pittsburgh, PA.
 
@@ -14,5 +14,6 @@ permalink: /:categories/:title/ # assists with page URLs, displays as /work/cont
 includes:
 - favicons
 - images
-- css
 - pages
+- css
+- js
