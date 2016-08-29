@@ -14,6 +14,7 @@ html {
 }
 .grid__col--centered { text-align: center; }
 .font-normal { font-weight: normal; }
+.font-bold { font-weight: bold; }
 .no-underline { text-decoration: none; }
 .text-upper { text-transform: uppercase; }
 .text-right { text-align: right; }
@@ -37,9 +38,11 @@ a, a:visited, a svg {
 a:hover { color: blue; }
 a:hover svg { fill: blue; }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Palatino Linotype', Georgia, serif;
-	line-height: 1;
+	font-family: serif;
+	line-height: 1.25;
 }
+html.wf-sortsmillgoudy-n4-active h1, html.wf-sortsmillgoudy-n4-active h2, html.wf-sortsmillgoudy-n4-active h3, html.wf-sortsmillgoudy-n4-active h4, html.wf-sortsmillgoudy-n4-active h5, html.wf-sortsmillgoudy-n4-active h6 { font-family: 'Sorts Mill Goudy'; }
+
 p {
 	padding-bottom: 1.5rem;
 	line-height: 1.4;
@@ -52,22 +55,49 @@ ul.no-bullet {
 }
 /* LAYOUT */
 header {
-	background: #7367ac;
-	background-image: linear-gradient(#2c60a5, #b581b2);
+	background: #5a4969;
 	position: relative;
 	height: 30vh;
 	color: white;
+	overflow: hidden;
 }
-header.home { height: 100vh; }
+header #sky {
+	height: 30vh;
+	position: relative;
+}
+header.home, header.home #sky { height: 100vh; }
+header #sky .clouds {
+	position: absolute;
+	-webkit-transform: translateZ(0);
+	transform:         translateZ(0);
+	opacity: 0.7;
+	height: 100%;
+	max-width: none;
+}
+header #sky #clouds-long {
+	-webkit-animation: clouds-long 23s linear infinite;
+	animation:         clouds-long 23s linear infinite;
+}
+header #sky #clouds1 {
+	-webkit-animation: clouds1 9s linear infinite;
+	animation:         clouds1 9s linear infinite;
+}
+header #sky #clouds2 {
+	-webkit-animation: clouds2 12s linear infinite;
+	animation:         clouds2 12s linear infinite;
+	z-index: 2;
+}
 header div.wrap {
 	-webkit-transform: translate(-50%, -50%);
 	transform:         translate(-50%, -50%);
 	font-style: italic;
 	text-align: center;
 	position: absolute;
-	font-size: 4vw;
+	font-size: 6vw;
+	width: 100%;
 	left: 50%;
 	top:  50%;
+	z-index: 3;
 }
 header h1 { margin: 0; }
 header span.amp { display: inline-block; }
@@ -135,19 +165,11 @@ header a.home svg {
 	-webkit-filter: grayscale(100%);
 	filter: gray;
 }
-#contact h3 {
-	font-weight: normal;
+#contact h2 {
 	font-size: 1.75rem;
 	line-height: 1.5;
 }
-#contact h3 a {
-	display: inline-block;
-	font-weight: bold;
-}
-#contact h3 a svg {
-	height: 1.25rem;
-	width:  1.25rem;
-}
+#contact h2 a { display: inline-block; }
 footer {
 	background-color: #111;
 	position: relative;
@@ -201,6 +223,36 @@ footer ul.page-list a:hover {
 	header a:hover svg, footer a:hover svg {
 		-webkit-transform: none;
 		transform:         none;
+	}
+}
+@keyframes clouds-long {
+	0% {
+		-webkit-transform: translate(100vw, -20%);
+		transform:         translate(100vw, -20%);
+	}
+	100% {
+		-webkit-transform: translate(-8300px, -70%);
+		transform:         translate(-8300px, -70%);
+	}
+}
+@keyframes clouds1 {
+	0% {
+		-webkit-transform: translate(110vw, -20%);
+		transform:         translate(110vw, -20%);
+	}
+	100% {
+		-webkit-transform: translate(-3000px, -70%);
+		transform:         translate(-3000px, -70%);
+	}
+}
+@keyframes clouds2 {
+	0% {
+		-webkit-transform: translate(110vw, -20%);
+		transform:         translate(110vw, -20%);
+	}
+	100% {
+		-webkit-transform: translate(-3000px, -70%);
+		transform:         translate(-3000px, -70%);
 	}
 }
 /* ANIMATION GOODNESS FROM https://daneden.github.io/animate.css/ */

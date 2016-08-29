@@ -7,20 +7,9 @@ in_footer: true
 <section id="about" class="large-margin">
     <div class="grid__col--12-of-12 grid__col--centered grid__col small-margin small-padding-top">
       <h1 class="page-heading">Hello world!</h1>
-      <h3 class="font-normal">I'm an independent developer and designer with a passion for clean &amp; efficient websites.</h3>
+      <h2 class="font-normal">I'm an independent developer and designer<br>with a passion for clean &amp; efficient websites.</h2>
     </div>
 
-    {% for item in site.categories['process'] %}
-        <div class="grid__col--1-of-4 grid__col">
-            {% if item.image_path %}
-              <img src="{{ item.image_path }}" alt="{{ item.title }}" class="grid__col--centered" />
-            {% elsif item.svg_icon %}
-              <svg class="process-icon"><use xlink:href="/symbol-defs.svg#icon-{{ item.svg_icon }}"></use></svg>
-            {% endif %}
-            <div class="grid__col--centered text-upper process-title">{{ item.title }}</div>
-            <div>{{ item.content }}</div>
-        </div>
-    {% endfor %}
 </section>
 
 <section id="what" class="large-margin">
@@ -33,7 +22,7 @@ in_footer: true
 </section>
 
 <section id="work">
-    <h3 class="grid__col--12-of-12 grid__col">Featured work</h3>
+    <h2 class="grid__col--12-of-12 grid__col">Featured work</h2>
     <div class="post-list no-bullet large-margin">
         {% for item in site.categories['work'] %}
             <div class="post grid__col--1-of-2 grid__col">
@@ -45,7 +34,7 @@ in_footer: true
         {% endfor %}
     </div>
 
-    <h3 class="grid__col--12-of-12 grid__col">My experiments</h3>
+    <h2 class="grid__col--12-of-12 grid__col">My experiments</h2>
     <div class="post-list no-bullet large-margin">
         {% for item in site.categories['experiments'] %}
             <div class="post grid__col--1-of-2 grid__col">
@@ -59,5 +48,5 @@ in_footer: true
 </section>
 
 <section id="contact" class="grid__col--centered grid__col--12-of-12 grid__col">
-    <h3 class="small-margin">Interested in having me work on your project? <a class="no-underline" href="/contact">Get in touch <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#icon-chevron-thin-right"></use></svg></a></h3>
+    <h2 class="font-normal small-margin">Interested in having me work on your project? <a class="font-bold no-underline" href="/contact">Get in touch!</a></h2>
 </section>
