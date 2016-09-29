@@ -38,11 +38,9 @@ a, a:visited, a svg {
 a:hover { color: blue; }
 a:hover svg { fill: blue; }
 h1, h2, h3, h4, h5, h6 {
-	font-family: serif;
+	font-family: 'Palatino Linotype', Georgia, serif;
 	line-height: 1.25;
 }
-html.wf-sortsmillgoudy-n4-active h1, html.wf-sortsmillgoudy-n4-active h2, html.wf-sortsmillgoudy-n4-active h3, html.wf-sortsmillgoudy-n4-active h4, html.wf-sortsmillgoudy-n4-active h5, html.wf-sortsmillgoudy-n4-active h6 { font-family: 'Sorts Mill Goudy'; }
-
 p {
 	padding-bottom: 1.5rem;
 	line-height: 1.4;
@@ -55,38 +53,11 @@ ul.no-bullet {
 }
 /* LAYOUT */
 header {
-	background: #5a4969;
-	position: relative;
+	background: #111;
 	height: 30vh;
 	color: white;
-	overflow: hidden;
 }
-header #sky {
-	height: 30vh;
-	position: relative;
-}
-header.home, header.home #sky { height: 100vh; }
-header #sky .clouds {
-	position: absolute;
-	-webkit-transform: translateZ(0);
-	transform:         translateZ(0);
-	opacity: 0.7;
-	height: 100%;
-	max-width: none;
-}
-header #sky #clouds-long {
-	-webkit-animation: clouds-long 23s linear infinite;
-	animation:         clouds-long 23s linear infinite;
-}
-header #sky #clouds1 {
-	-webkit-animation: clouds1 9s linear infinite;
-	animation:         clouds1 9s linear infinite;
-}
-header #sky #clouds2 {
-	-webkit-animation: clouds2 12s linear infinite;
-	animation:         clouds2 12s linear infinite;
-	z-index: 2;
-}
+header.home { height: 100vh; }
 header div.wrap {
 	-webkit-transform: translate(-50%, -50%);
 	transform:         translate(-50%, -50%);
@@ -223,36 +194,6 @@ footer ul.page-list a:hover {
 	header a:hover svg, footer a:hover svg {
 		-webkit-transform: none;
 		transform:         none;
-	}
-}
-@keyframes clouds-long {
-	0% {
-		-webkit-transform: translate(100vw, -20%);
-		transform:         translate(100vw, -20%);
-	}
-	100% {
-		-webkit-transform: translate(-8300px, -70%);
-		transform:         translate(-8300px, -70%);
-	}
-}
-@keyframes clouds1 {
-	0% {
-		-webkit-transform: translate(110vw, -20%);
-		transform:         translate(110vw, -20%);
-	}
-	100% {
-		-webkit-transform: translate(-3000px, -70%);
-		transform:         translate(-3000px, -70%);
-	}
-}
-@keyframes clouds2 {
-	0% {
-		-webkit-transform: translate(110vw, -20%);
-		transform:         translate(110vw, -20%);
-	}
-	100% {
-		-webkit-transform: translate(-3000px, -70%);
-		transform:         translate(-3000px, -70%);
 	}
 }
 /* ANIMATION GOODNESS FROM https://daneden.github.io/animate.css/ */

@@ -30,19 +30,5 @@ Beam me up<br>
 </div>
 </footer>
 <script src="/js/smoothscroll.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.26/webfontloader.js" async></script>
-<script type="text/javascript">
-WebFontConfig = {
-	google: { families: ['Sorts Mill Goudy', 'Sorts Mill Goudy:italic', 'Sorts Mill Goudy:bold'] },
-	active: function() { sessionStorage.fonts = true; },
-	timeout: 2000
-};
-
-(function() {
-	if (sessionStorage.fonts) {
-		console.log("Fonts loaded from cache.");
-		document.documentElement.classList.add('wf-active');
-	} else
-		console.log("No fonts loaded from cache.");
-})();
-</script>
+<script src="/js/particleground.min.retina.js"></script>
+<script type="text/javascript">particleground(document.getElementById('top'));</script>
