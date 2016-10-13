@@ -29,6 +29,85 @@ Beam me up<br>
 </div>
 </div>
 </footer>
-<script src="/js/smoothscroll.min.js"></script>
-<script src="/js/particleground.min.retina.js"></script>
-<script type="text/javascript">particleground(document.getElementById('top'));</script>
+<script type="text/javascript">
+// Smooth scrolling on any #anchor links
+window.smoothScroll=function(){if(void 0!==document.querySelectorAll&&void 0!==window.pageYOffset&&void 0!==history.pushState){var e=function(e){return"HTML"===e.nodeName?-window.pageYOffset:e.getBoundingClientRect().top+window.pageYOffset},n=function(e){return.5>e?4*e*e*e:(e-1)*(2*e-2)*(2*e-2)+1},t=function(e,t,o,i){return o>i?t:e+(t-e)*n(o/i)},o=function(n,o,i){o=o||500;var r=window.pageYOffset;if("number"==typeof n)var u=parseInt(n);else var u=e(n);var a=Date.now(),d=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||function(e){window.setTimeout(e,15)},f=function(){var e=Date.now()-a;window.scroll(0,t(r,u,e,o)),e>o?"function"==typeof i&&i(n):d(f)};f()},i=function(e){e.preventDefault(),o(document.getElementById(this.hash.substring(1)),500,function(e){})};return document.addEventListener("DOMContentLoaded",function(){for(var e,n=document.querySelectorAll('a[href^="#"]'),t=n.length;e=n[--t];)e.addEventListener("click",i,!1)}),o}}();
+
+// Waves background inspired by https://codepen.io/hakimel/details/ZOrvQV/
+// If you're reading this, thanks Hakim!
+const canvas  = document.querySelector('canvas');
+const context = canvas.getContext('2d');
+const lines   = [];
+var step = 0, width = 0, height = 0;
+
+window.onresize = setup;
+setup();
+update();
+
+function setup() {
+	width  = window.innerWidth,
+	height = window.innerHeight;
+	lines.length = 0;
+	let lineCount  = height / 26;
+	let pointCount = 14;
+	let spacingH = width / pointCount;
+	let spacingV = height / lineCount;
+
+	for(let v = 0; v < lineCount; v++) {
+		let line = {points: [], ran: 0.2 + Math.random() * 0.7};
+
+		for(let h = 0; h < pointCount; h++) {
+			line.points.push({
+				nx: h * spacingH,
+				ny: v * spacingV
+			});
+		}
+
+		line.points.push({
+			nx: width + spacingH,
+			ny: v * spacingV
+		});
+
+		lines.push(line);
+	}
+}
+
+function update() {
+	step += 0.75;
+	canvas.width  = width;
+	canvas.height = height;
+	context.clearRect(0, 0, width, height);
+	context.lineWidth = 3;
+	context.strokeStyle = '#222';
+	context.fillStyle   = '#111';
+
+	lines.forEach((line, v) => {
+		context.beginPath();
+
+		line.points.forEach((point, h) => {
+			point.x = point.nx,
+			point.y = point.ny + Math.sin((point.x * line.ran + (step + point.ny)) / 40) * (6 + (point.ny / height * 34));
+		});
+
+		line.points.forEach( ( point, h ) => {
+			let nextPoint = line.points[h + 1];
+			if( h === 0 ) {
+				context.moveTo(point.x, point.y);
+			}
+			else if( nextPoint ) {
+				let cpx = point.x + (nextPoint.x - point.x) / 2;
+				let cpy = point.y + (nextPoint.y - point.y) / 2;
+				context.quadraticCurveTo(point.x, point.y, cpx, cpy);
+			}
+		});
+
+		context.stroke();
+		context.lineTo(width, height);
+		context.lineTo(0, height);
+		context.closePath();
+		context.fill();
+	});
+
+	requestAnimationFrame(update);
+}
+</script>

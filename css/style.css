@@ -53,22 +53,28 @@ ul.no-bullet {
 }
 /* LAYOUT */
 header {
+	margin-bottom: 2rem;
 	background: #111;
-	height: 30vh;
 	color: white;
 }
-header.home { height: 100vh; }
+header.home {
+	height: 100vh;
+	overflow: hidden;
+	margin-bottom: 0;
+}
 header div.wrap {
-	-webkit-transform: translate(-50%, -50%);
-	transform:         translate(-50%, -50%);
 	font-style: italic;
 	text-align: center;
-	position: absolute;
 	font-size: 6vw;
 	width: 100%;
+}
+header.home div.wrap {
+	-webkit-transform: translate(-50%, -50%);
+	transform:         translate(-50%, -50%);
+	position: absolute;
+	z-index: 3;
 	left: 50%;
 	top:  50%;
-	z-index: 3;
 }
 header h1 { margin: 0; }
 header span.amp { display: inline-block; }
