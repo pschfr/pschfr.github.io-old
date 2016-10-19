@@ -1,6 +1,6 @@
 #[pschfr.github.io](https://pschfr.github.io/)
 
-![](images/screenshot.png)
+![](images/screenshot.jpg)
 
 [daneden/Toast](https://github.com/daneden/Toast) for the responsive grid, rest of the magic is custom.
 
