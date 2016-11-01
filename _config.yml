@@ -15,4 +15,7 @@ includes:
 - favicons
 - images
 - pages
-- css
+
+# Sass configuration
+sass:
+    style: compressed
