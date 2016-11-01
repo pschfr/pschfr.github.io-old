@@ -2,11 +2,7 @@
 <div class='grid container'>
 <div class='grid__col--1-of-3 grid__col'>
 <ul class="no-bullet page-list">
-{% for page in site.pages %}
-{% if page.in_footer %}
-<li><a href="{{ page.permalink }}" class="no-underline">{{ page.title }}</a></li>
-{% endif %}
-{% endfor %}
+{% for page in site.pages %}{% if page.in_footer %}<li><a href="{{ page.permalink }}" class="no-underline">{{ page.title }}</a></li>{% endif %}{% endfor %}
 </ul>
 </div>
 <div class='grid__col--1-of-3 grid__col'>

@@ -1,21 +1,13 @@
-# Welcome to Jekyll!
-# SITE VARIABLES
 title: Paul Schaefer
 tagline: web designer and developer
 email: yeppaul2@gmail.com
 description: Paul Schaefer is a web designer and developer living in the lovely Pittsburgh, PA.
-
-# BUILD SETTINGS
-baseurl: ""                     # the subpath of your site, e.g. "/blog" or ""
-url: "https://pschfr.github.io" # the base hostname & protocol for your (live) site
-permalink: /:categories/:title/ # assists with page URLs, displays as /work/contact/
-
-# REQUIRED FILES
+baseurl: ""
+url: "https://pschfr.github.io"
+permalink: /:categories/:title/
 includes:
 - favicons
 - images
 - pages
-
-# Sass configuration
 sass:
     style: compressed
