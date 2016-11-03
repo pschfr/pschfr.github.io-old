@@ -1,9 +1,8 @@
 #[pschfr.github.io](https://pschfr.github.io/)
 
-![](images/screenshot.jpg)
 
-[daneden/Toast](https://github.com/daneden/Toast) for the responsive grid, rest of the magic is custom.
+This is my website. This iteration started out as [paul-wp](https://ithub.com/pschfr/paul-wp), but I quickly got bored with WordPress and wanted something more challenging.  This Jekyll-powered static site doesn't require any jQuery or other third-party JS, and the index page is 3 HTTP requests, and is ~24kb!
 
-This project started out as [paul-wp](https://github.com/pschfr/paul-wp), but I quickly got bored with WordPress and wanted something more challenging.  This Jekyll-powered iteration uses CSS gradients for the header backgrounds, and doesn't require jQuery :D
+[daneden/Toast](https://github.com/daneden/Toast) is used for the responsive grid, rest of the magic is custom.
 
-- [@pschfr](https://twitter.com/pschfr)
+###[@pschfr](https://twitter.com/pschfr)
