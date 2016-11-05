@@ -5,18 +5,16 @@ permalink: "/"
 in_footer: true
 has_contact: true
 ---
-<section id="about" class="large-margin">
+<section id="about" class="small-margin">
     <div class="grid__col--12-of-12 grid__col--centered grid__col small-margin small-padding-top">
       <h1 class="page-heading">Hello world!</h1>
       <h2 class="font-normal">I'm an independent developer and designer<br>with a passion for clean &amp; efficient websites.</h2>
     </div>
-
 </section>
 
 <section id="what" class="large-margin">
   <div class="grid__col--1-of-1 grid__col">
     <p><strong class="text-upper text-large">As we float through everyday life,</strong> we slowly discover what has meaning. What may be meaningful for you, is not for others. Learn to love this difference, and then progress is inevitable.</p>
-
     <p>Everything in the world is somehow designed, and everything that's designed can be improved. That's an extremely powerful thought that I can't manage to forget. Because of this, I have a high standard for my work. Design is all about choices; whether they are good or bad, is up to the designer.</p>
   </div>
 </section>
@@ -60,8 +58,9 @@ has_contact: true
     <div class="post-list no-bullet large-margin">
         {% for item in site.categories['articles'] %}
             <div class="post grid__col--1-of-3 grid__col">
-                <h2 class="font-normal">{{ item.title }}</h2>
-                {{ item.content }}
+                <h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
+                <h3 class="font-normal no-margin-top small-caps font-light">{{ item.date | date: "%b %-d, %Y" }}</h3>
+                {{ item.excerpt }}
                 <a href="{{ item.url }}">Continue reading<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
             </div>
         {% endfor %}
