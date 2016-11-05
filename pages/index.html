@@ -20,7 +20,8 @@ has_contact: true
 </section>
 
 <section id="work">
-    <h2 class="grid__col--12-of-12 grid__col small-caps">Featured Work</h2>
+    <h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">Featured Work</h2>
+    <h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">Projects made for Clients &amp; Friends</h3>
     <div class="post-list no-bullet small-margin">
         {% for item in site.categories['work'] %}
             <div class="post grid__col--1-of-2 grid__col">
@@ -36,7 +37,8 @@ has_contact: true
         {% endfor %}
     </div>
 
-    <h2 class="grid__col--12-of-12 grid__col small-caps">My Experiments</h2>
+    <h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">My Experiments</h2>
+    <h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">It's Aliveeeeeee!</h3>
     <div class="post-list no-bullet small-margin">
         {% for item in site.categories['experiments'] %}
             <div class="post grid__col--1-of-2 grid__col">
@@ -54,12 +56,13 @@ has_contact: true
 
     <h1 class="grid__col--centered large-margin github-link"><a href="https://github.com/pschfr" target=_"blank" class="no-fill no-underline">View all projects on my GitHub!<br/><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#octocat"></use></svg></a></h1>
 
-    <h2 class="grid__col--12-of-12 grid__col small-caps">Latest Posts</h2>
+    <h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">Latest Posts</h2>
+    <h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">Fresh off the Presses</h3>
     <div class="post-list no-bullet large-margin">
         {% for item in site.categories['articles'] %}
             <div class="post grid__col--1-of-3 grid__col">
-                <h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
-                <h3 class="font-normal no-margin-top small-caps font-light">{{ item.date | date: "%b %-d, %Y" }}</h3>
+                <h2 class="font-normal no-margin-bottom"><a href="{{ item.url }}" class="no-underline">{{ item.title }}</a></h2>
+                <h4 class="font-normal no-margin-top font-light"><em>{{ item.date | date: "%b %-d, %Y" }}</em></h4>
                 {{ item.excerpt }}
                 <a href="{{ item.url }}">Continue reading<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
             </div>

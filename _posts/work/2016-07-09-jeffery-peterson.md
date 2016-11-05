@@ -6,4 +6,6 @@ categories: work
 tags: portfolio
 link: "http://jwpdigitalmedia.com/"
 ---
-Another description. How long should I make these? That is something I will put some research into. It’s an interesting topic. I’ve seen paragraphs upon paragraphs, to only screenshots and links.
+Full page video pops out right at you as you load this site.
+
+Unfortunately, his site is temporarily down :(
