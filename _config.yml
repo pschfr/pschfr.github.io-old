@@ -9,5 +9,6 @@ includes:
 - favicons
 - images
 - pages
+- js
 sass:
     style: compressed

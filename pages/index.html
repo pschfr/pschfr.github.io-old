@@ -4,6 +4,7 @@ title: "Home"
 permalink: "/"
 in_footer: true
 has_contact: true
+github_link: true
 ---
 <section id="about" class="small-margin">
     <div class="grid__col--12-of-12 grid__col--centered grid__col small-margin small-padding-top">
@@ -13,61 +14,72 @@ has_contact: true
 </section>
 
 <section id="what" class="large-margin">
-  <div class="grid__col--1-of-1 grid__col">
+  <div class="grid__col--2-of-3 grid__col">
     <p><strong class="text-upper text-large">As we float through everyday life,</strong> we slowly discover what has meaning. What may be meaningful for you, is not for others. Learn to love this difference, and then progress is inevitable.</p>
     <p>Everything in the world is somehow designed, and everything that's designed can be improved. That's an extremely powerful thought that I can't manage to forget. Because of this, I have a high standard for my work. Design is all about choices; whether they are good or bad, is up to the designer.</p>
+  </div>
+  <div class="grid__col--1-of-3 grid__col">
+  	<div id="lastFM"></div>
   </div>
 </section>
 
 <section id="work">
-    <h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">Featured Work</h2>
-    <h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">Projects made for Clients &amp; Friends</h3>
-    <div class="post-list no-bullet small-margin">
-        {% for item in site.categories['work'] %}
-            <div class="post grid__col--1-of-2 grid__col">
-                <h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
-                <h3 class="font-normal no-margin-top small-caps font-light">
-                    {% for tag in item.tags %}
-                        {{ tag }}
-                    {% endfor %}
-                </h3>
-                {{ item.content }}
-                <a href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
-            </div>
-        {% endfor %}
-    </div>
+	{% if site.categories['experiments'] %}
+    	<h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">Featured Work</h2>
+    	<h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">Projects made for Clients &amp; Friends</h3>
+    	<div class="post-list no-bullet small-margin">
+        	{% for item in site.categories['work'] %}
+            	<div class="post grid__col--1-of-2 grid__col">
+                	<h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
+                	<h3 class="font-normal no-margin-top small-caps font-light">
+                    	{% for tag in item.tags %}
+                        	{{ tag }}
+                    	{% endfor %}
+                	</h3>
+                	{{ item.content }}
+                	<a href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
+            	</div>
+        	{% endfor %}
+    	</div>
+	{% endif %}
 
-    <h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">My Experiments</h2>
-    <h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">It's Aliveeeeeee!</h3>
-    <div class="post-list no-bullet small-margin">
-        {% for item in site.categories['experiments'] %}
-            <div class="post grid__col--1-of-2 grid__col">
-                <h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
-                <h3 class="font-normal no-margin-top small-caps font-light">
-                    {% for tag in item.tags %}
-                        {{ tag }}
-                    {% endfor %}
-                </h3>
-                {{ item.content }}
-                <a href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
-            </div>
-        {% endfor %}
-    </div>
+	{% if site.categories['experiments'] %}
+	    <h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">My Experiments</h2>
+	    <h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">It's Aliveeeeeee!</h3>
+	    <div class="post-list no-bullet small-margin">
+	        {% for item in site.categories['experiments'] %}
+	            <div class="post grid__col--1-of-2 grid__col">
+	                <h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
+	                <h3 class="font-normal no-margin-top small-caps font-light">
+	                    {% for tag in item.tags %}
+	                        {{ tag }}
+	                    {% endfor %}
+	                </h3>
+	                {{ item.content }}
+	                <a href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
+	            </div>
+	        {% endfor %}
+	    </div>
+	{% endif %}
 
-    <h1 class="grid__col--centered large-margin github-link"><a href="https://github.com/pschfr" target=_"blank" class="no-fill no-underline">View all projects on my GitHub!<br/><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#octocat"></use></svg></a></h1>
+	{% if page.github_link %}
+    	<h1 class="grid__col--centered large-margin github-link"><a href="https://github.com/pschfr" target=_"blank" class="no-fill no-underline">View all projects on my GitHub!<br/><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#octocat"></use></svg></a></h1>
+	{% endif %}
 
-    <h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">Latest Posts</h2>
-    <h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">Fresh off the Presses</h3>
-    <div class="post-list no-bullet large-margin">
-        {% for item in site.categories['articles'] %}
-            <div class="post grid__col--1-of-3 grid__col">
-                <h2 class="font-normal no-margin-bottom"><a href="{{ item.url }}" class="no-underline">{{ item.title }}</a></h2>
-                <h4 class="font-normal no-margin-top font-light"><em>{{ item.date | date: "%b %-d, %Y" }}</em></h4>
-                {{ item.excerpt }}
-                <a href="{{ item.url }}">Continue reading<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
-            </div>
-        {% endfor %}
-    </div>
+	{% if site.categories['articles'] %}
+    	<h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">Latest Posts</h2>
+    	<h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">Fresh off the Presses</h3>
+    	<div class="post-list no-bullet large-margin">
+        	{% for item in site.categories['articles'] %}
+            	<div class="post grid__col--1-of-3 grid__col">
+                	<h2 class="font-normal no-margin-bottom"><a href="{{ item.url }}" class="no-underline">{{ item.title }}</a></h2>
+                	<h4 class="font-normal no-margin-top font-light"><em>{{ item.date | date: "%b %-d, %Y" }}</em></h4>
+                	{{ item.excerpt }}
+                	<a href="{{ item.url }}">Continue reading<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
+            	</div>
+        	{% endfor %}
+    	</div>
 
-    <!-- Button to view all posts -->
+		<h1 class="grid__col--centered large-margin article-link"><a href="{{ base.url | url.escape }}/articles">View all articles<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a></h1>
+	{% endif %}
 </section>

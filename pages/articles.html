@@ -1,0 +1,16 @@
+---
+layout: page
+title: "Articles"
+permalink: "/articles/"
+has_contact: true
+---
+<section id="work">
+    <div class="post-list no-bullet large-margin">
+        {% for item in site.categories['articles'] %}
+            <div class="post grid__col--12-of-12 grid__col">
+                <a href="{{ item.url }}"><h2 class="font-normal no-margin-bottom"><a href="{{ item.url }}" class="no-underline">{{ item.title }}</a></h2></a>
+                <h4 class="font-normal no-margin-top font-light"><em>{{ item.date | date: "%b %-d, %Y" }}</em></h4>
+            </div>
+        {% endfor %}
+    </div>
+</section>
