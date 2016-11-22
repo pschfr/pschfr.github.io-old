@@ -6,20 +6,16 @@ in_footer: true
 has_contact: true
 github_link: true
 ---
-<section id="about" class="small-margin">
-    <div class="grid__col--12-of-12 grid__col--centered grid__col small-margin small-padding-top">
+<section id="about" class="large-margin large-margin-top">
+  <div class="grid__col--3-of-5 grid__col">
       <h1 class="page-heading">Hello world!</h1>
-      <h2 class="font-normal">I'm an independent developer and designer<br>with a passion for clean &amp; efficient websites.</h2>
-    </div>
-</section>
-
-<section id="what" class="large-margin">
-  <div class="grid__col--2-of-3 grid__col">
-    <p><strong class="text-upper text-large">As we float through everyday life,</strong> we slowly discover what has meaning. What may be meaningful for you, is not for others. Learn to love this difference, and then progress is inevitable.</p>
-    <p>Everything in the world is somehow designed, and everything that's designed can be improved. That's an extremely powerful thought that I can't manage to forget. Because of this, I have a high standard for my work. Design is all about choices; whether they are good or bad, is up to the designer.</p>
+      <h2 class="font-normal medium-margin">I'm an independent developer and designer with a passion for clean &amp; efficient websites.</h2>
+      <p>I aim to make the world a happier, cleaner, and more functional place.</p>
+      <p>Follow along with my ramblings on <a href="https://twitter.com/pschfr" target="_blank" rel="noopener noreferrer">Twitter</a>, or my code on <a href="https://github.com/pschfr" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
   </div>
-  <div class="grid__col--1-of-3 grid__col">
-  	<div id="lastFM"></div>
+  <div class="grid__col--1-of-5 grid__col"></div>
+  <div class="grid__col--1-of-5 grid__col">
+  	<div id="lastFM" class="text-center small-margin-top"></div>
   </div>
 </section>
 
@@ -27,7 +23,7 @@ github_link: true
 	{% if site.categories['experiments'] %}
     	<h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">Featured Work</h2>
     	<h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">Projects made for Clients &amp; Friends</h3>
-    	<div class="post-list no-bullet small-margin">
+    	<div class="post-list no-bullet medium-margin">
         	{% for item in site.categories['work'] %}
             	<div class="post grid__col--1-of-2 grid__col">
                 	<h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
@@ -37,7 +33,7 @@ github_link: true
                     	{% endfor %}
                 	</h3>
                 	{{ item.content }}
-                	<a href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
+                	<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
             	</div>
         	{% endfor %}
     	</div>
@@ -56,7 +52,7 @@ github_link: true
 	                    {% endfor %}
 	                </h3>
 	                {{ item.content }}
-	                <a href="{{ item.link }}" target="_blank">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
+	                <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
 	            </div>
 	        {% endfor %}
 	    </div>

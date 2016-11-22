@@ -9,7 +9,7 @@ has_contact: true
         {% for item in site.categories['articles'] %}
             <div class="post grid__col--12-of-12 grid__col">
                 <a href="{{ item.url }}"><h2 class="font-normal no-margin-bottom"><a href="{{ item.url }}" class="no-underline">{{ item.title }}</a></h2></a>
-                <h4 class="font-normal no-margin-top font-light"><em>{{ item.date | date: "%b %-d, %Y" }}</em></h4>
+                <h4 class="font-normal no-margin-top font-light"><em>Published {{ item.date | date: "%b %-d, %Y" }}</em></h4>
             </div>
         {% endfor %}
     </div>
