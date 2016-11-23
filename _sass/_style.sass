@@ -73,7 +73,7 @@ a, a:visited, a svg
 	display: inline-block
 	position: relative
 	overflow: hidden
-	color: inherit
+	color: $link-color
 	border: none
 a:after
 	@include prefix(transition, left 0.35s, webkit moz)
@@ -86,14 +86,6 @@ a:after
 	height: 1px
 a:hover:after
 	left: 0
-a:hover
-	color: $link-color
-a:visited:hover
-	color: $visited-color
-// Ok, this got weird.
-// In Chrome, the svg seems to ignore :visited, staying blue?
-// In Firefox, the svg and link are blue for a split second, then both animating purple.
-// (which if I think about it, makes sense cause of the ambiguous transition rule)
 a svg
 	fill: currentColor
 h1, h2, h3, h4, h5, h6
@@ -180,6 +172,7 @@ header a.home svg
 .article-link svg
 	height: 24px
 	width: 24px
+	vertical-align: top
 #contact h2
 	font-size: 1.75rem
 	line-height: 1.5
@@ -207,8 +200,9 @@ footer a:hover svg
 footer ul.page-list
 	text-align: left
 	line-height: 2
-footer ul.page-list a:hover
+footer ul.page-list a
 	color: inherit
+footer ul.page-list a:hover
 	text-decoration: underline
 // RESPONSIVENESS MAGIC
 @include media-query($narrow-width)

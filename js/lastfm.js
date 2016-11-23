@@ -11,12 +11,12 @@ function lastFM_request() {
 	    if (xmlhttp.readyState == 4) {
 	        if(xmlhttp.status == 200) {
 	            var track = JSON.parse(xmlhttp.responseText).recenttracks.track[0];
-				element.innerHTML += '<img src="' + track.image[3]['\#text'] + '" alt="' + track.album['\#text'] + ' by ' + track.artist['\#text'] + '" /><br />';
+				element.innerHTML += '<img src="' + track.image[3]['\#text'] + '" alt="' + track.album['\#text'] + ' by ' + track.artist['\#text'] + '" class="small-margin" />';
 				if (track['\@attr'] && track['\@attr'].nowplaying !== '')
 					element.innerHTML += 'I am currently listening to: ';
 				else
 					element.innerHTML += 'I last listened to: ';
-				element.innerHTML += '<a href="' + track.url + '" title="on album: ' + track.album['\#text'] + '">' + track.artist['\#text'] + ' &mdash; ' + track.name + '</a> ';
+				element.innerHTML += '<a href="' + track.url + '" title="on album: ' + track.album['\#text'] + '" class="no-underline">' + track.artist['\#text'] + ' &mdash; ' + track.name + '</a> ';
 	         }
 	    }
 	};

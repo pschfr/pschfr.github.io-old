@@ -1,14 +1,23 @@
+# Welcome to Jekyll!
+# https://github.com/pschfr/pschfr.github.io
 title: Paul Schaefer
 tagline: web designer and developer
 email: yeppaul2@gmail.com
 description: Paul Schaefer is a web designer and developer living in the lovely Pittsburgh, PA.
 baseurl: ""
 url: "https://pschfr.github.io"
-permalink: /:categories/:title/
+permalink: /:categories/:title/ # e.g. articles/title.html
+
+# Adds other folders besides _includes, _layouts, _posts
 includes:
 - favicons
 - images
 - pages
 - js
+
+# Obviously compresses the Sass output.
 sass:
     style: compressed
+
+# The HTML is compressed via _layouts/compress.html
+# http://jch.penibelst.de/

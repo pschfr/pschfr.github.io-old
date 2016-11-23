@@ -4,14 +4,14 @@ title: "Home"
 permalink: "/"
 in_footer: true
 has_contact: true
-github_link: true
 ---
 <section id="about" class="large-margin large-margin-top">
   <div class="grid__col--3-of-5 grid__col">
       <h1 class="page-heading">Hello world!</h1>
-      <h2 class="font-normal medium-margin">I'm an independent developer and designer with a passion for clean &amp; efficient websites.</h2>
+      <h2 class="font-normal small-margin">I'm a designer and developer with a passion for clean &amp; efficient websites.</h2>
       <p>I aim to make the world a happier, cleaner, and more functional place.</p>
       <p>Follow along with my ramblings on <a href="https://twitter.com/pschfr" target="_blank" rel="noopener noreferrer">Twitter</a>, or my code on <a href="https://github.com/pschfr" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+	  <p>Have any questions, or want to work with me? <a href="/contact">Ask away!</a></p>
   </div>
   <div class="grid__col--1-of-5 grid__col"></div>
   <div class="grid__col--1-of-5 grid__col">
@@ -58,14 +58,14 @@ github_link: true
 	    </div>
 	{% endif %}
 
-	{% if page.github_link %}
-    	<h1 class="grid__col--centered large-margin github-link"><a href="https://github.com/pschfr" target=_"blank" class="no-fill no-underline">View all projects on my GitHub!<br/><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#octocat"></use></svg></a></h1>
-	{% endif %}
+	<h1 class="grid__col--centered large-margin github-link">
+		<a href="https://github.com/pschfr" target=_"blank" class="no-fill no-underline">View all projects on my GitHub!<br/><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#octocat"></use></svg></a>
+	</h1>
 
 	{% if site.categories['articles'] %}
     	<h2 class="grid__col--12-of-12 grid__col small-caps no-margin-bottom">Latest Posts</h2>
     	<h3 class="grid__col--12-of-12 grid__col small-caps no-margin-top font-normal font-light">Fresh off the Presses</h3>
-    	<div class="post-list no-bullet large-margin">
+    	<div class="post-list no-bullet medium-margin">
         	{% for item in site.categories['articles'] %}
             	<div class="post grid__col--1-of-3 grid__col">
                 	<h2 class="font-normal no-margin-bottom"><a href="{{ item.url }}" class="no-underline">{{ item.title }}</a></h2>
