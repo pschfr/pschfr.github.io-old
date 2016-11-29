@@ -18,7 +18,7 @@ html
 .font-bold
 	font-weight: bold
 .font-light
-	color: #444
+	color: $grey-color
 .no-underline
 	text-decoration: none
 .no-underline:after
@@ -161,6 +161,11 @@ header a.home svg
 	margin-top: 3rem
 .post-list .post:nth-child(odd)
 	padding-right: 20px
+span.tag
+	background-color: lighten($grey-color, 45%)
+	color: white
+	padding: 2px
+	border-radius: 4px
 .post-list .post a svg
 	height: 18px
 	width: 18px
@@ -173,6 +178,13 @@ header a.home svg
 	height: 24px
 	width: 24px
 	vertical-align: top
+article.post
+	width: 75%
+	margin: 0 auto
+	min-height: 40vh
+.thanks-for-reading h3
+	color: lighten($grey-color, 30%)
+	letter-spacing: 4px
 #contact h2
 	font-size: 1.75rem
 	line-height: 1.5
