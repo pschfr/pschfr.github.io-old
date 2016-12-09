@@ -24,8 +24,7 @@ $narrow-width:  700px
     @if $vendors
         @each $vendor in $vendors
             #{"-" + $vendor + "-" + $property}: #{$value}
-
-            #{$property}: #{$value}
+    #{$property}: #{$value}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "normalize"

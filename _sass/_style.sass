@@ -137,6 +137,7 @@ header a.arrow
 	left:   0%
 header a.arrow:hover svg
 	@include prefix(transform, scale(1.25), webkit moz)
+	@include prefix(transform-origin, center, webkit moz)
 header a.home
 	text-transform: uppercase
 	padding: 1rem 0 0 1rem
@@ -164,6 +165,8 @@ header a.home svg
 span.tag
 	background-color: lighten($grey-color, 45%)
 	color: white
+	display: inline-block
+	margin-top: 4px
 	padding: 2px
 	border-radius: 4px
 .post-list .post a svg
@@ -190,6 +193,11 @@ article.post
 	line-height: 1.5
 #contact h2 a
 	display: inline-block
+#contact-form
+	position: absolute
+	top: 50%
+	left: 50%
+	@include prefix(transform, translateX(-50%), webkit moz)
 footer
 	background-color: $dark-color
 	position: relative
@@ -208,6 +216,7 @@ footer svg
 	fill: white
 footer a:hover svg
 	@include prefix(transform, scale(1.25), webkit moz)
+	@include prefix(transform-origin, center, webkit moz)
 	fill: white
 footer ul.page-list
 	text-align: left
