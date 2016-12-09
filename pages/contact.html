@@ -6,10 +6,18 @@ in_footer: true
 ---
 <div style="position: relative;">
 <div id="contact-map" style="height: calc(100vh - 150px);"></div>
-	<form id="contact-form" accept-charset="UTF-8" action="https://formspree.io/yeppaul2+website@gmail.com" method="POST">
-		<input type="email" name="_replyto" placeholder="Your Email">
-		<input type="text" name="name" placeholder="Your Name">
-		<button type="submit">Submit</button>
+	<form id="contact-form" action="hasdfasdttps://formspree.io/yeppaul2+website@gmail.com" method="POST">
+		<p>
+			<label for="_replyto">Your Email</label>
+			<input type="email" name="_replyto" placeholder="john@email.com">
+		</p>
+		<p>
+			<label for="name">Your Name</label>
+			<input type="text" name="name" placeholder="John Doe">
+		</p>
+		<input type="text" name="_gotcha" style="display:none">
+		<input type="hidden" name="_format" value="plain">
+		<input type="button" id="submit-button" onclick="checkValidation();" value="Send Message">
 	</form>
 </div>
 <script type="text/javascript">
@@ -25,5 +33,11 @@ in_footer: true
 			draggable: false,
 			zoom: 14
 		});
+	}
+	function checkValidation() {
+		var contact_form = document.getElementById('contact-form'),
+			inputs = contact_form.getElementsByTagName('input');
+		if (inputs[0].value.length != 0 && inputs[1].value.length != 0 && inputs[0].checkValidity())
+			contact_form.submit();
 	}
 </script>

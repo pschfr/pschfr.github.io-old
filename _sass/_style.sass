@@ -195,9 +195,18 @@ article.post
 	display: inline-block
 #contact-form
 	position: absolute
-	top: 50%
+	top: calc(100vh - 100%)
 	left: 50%
 	@include prefix(transform, translateX(-50%), webkit moz)
+	input
+		background-color: rgba(0, 0, 0, 0.5)
+		color: white
+		padding: 4px
+		@include prefix(border-radius, 4px, webkit moz)
+		border: 1px solid
+	label
+		display: block
+		color: white
 footer
 	background-color: $dark-color
 	position: relative
