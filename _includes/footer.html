@@ -1,33 +1,35 @@
-<footer class="site-footer text-upper">
-<div class='grid container'>
-<div class='grid__col--1-of-3 grid__col'>
-<ul class="no-bullet page-list">
-{% for page in site.pages %}{% if page.in_footer %}<li><a href="{{ page.permalink }}" class="no-underline">{{ page.title }}</a></li>{% endif %}{% endfor %}
-</ul>
-</div>
-<div class='grid__col--1-of-3 grid__col'>
-Share Via<br>
-<a href='https://facebook.com/sharer/sharer.php?u={{ site.url | url_escape }}{{ page.url | url_escape }}' target='_blank' class='no-underline'>
-<svg><use xlink:href="/symbol-defs.svg#facebook"></use></svg>
-</a>
-<a href='https://twitter.com/intent/tweet/?text={{ page.title | url.escape }}%20-%20{{ site.title | url.escape }},%20{{ site.tagline | url.escape }}&via=pschfr&url={{ site.url | url_escape }}{{ page.url | url_escape }}' target='_blank' class='no-underline'>
-<svg><use xlink:href="/symbol-defs.svg#twitter"></use></svg>
-</a>
-<a href='mailto:?to=%20&subject=%20&body={{ site.url | url_escape }}{{ page.url | url_escape }}' class='no-underline'>
-<svg><use xlink:href="/symbol-defs.svg#mail"></use></svg>
-</a>
-</div>
-<div class='grid__col--1-of-3 grid__col'>
-Beam me up<br>
-<a class='arrow no-underline' href='#top'>
-<svg><use xlink:href="/symbol-defs.svg#chevron-up"></use></svg>
-</a>
-</div>
-</div>
+<footer class="container-fluid site-footer font-bold text-upper">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-xs-12">
+				<ul class="no-bullet page-list">
+					{% for page in site.pages %}{% if page.in_footer %}<li><a href="{{ page.permalink }}" class="no-underline">{{ page.title }}</a></li>{% endif %}{% endfor %}
+				</ul>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				Share Via<br>
+				<a href='https://facebook.com/sharer/sharer.php?u={{ site.url | url_escape }}{{ page.url | url_escape }}' target='_blank' class='no-underline'>
+					<svg><use xlink:href="/symbol-defs.svg#facebook"></use></svg>
+				</a>
+				<a href='https://twitter.com/intent/tweet/?text={{ page.title | url.escape }}%20-%20{{ site.title | url.escape }},%20{{ site.tagline | url.escape }}&via=pschfr&url={{ site.url | url_escape }}{{ page.url | url_escape }}' target='_blank' class='no-underline'>
+					<svg><use xlink:href="/symbol-defs.svg#twitter"></use></svg>
+				</a>
+				<a href='mailto:?to=%20&subject=%20&body={{ site.url | url_escape }}{{ page.url | url_escape }}' class='no-underline'>
+					<svg><use xlink:href="/symbol-defs.svg#mail"></use></svg>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				Beam me up<br>
+				<a class='arrow no-underline' href='#top'>
+					<svg><use xlink:href="/symbol-defs.svg#chevron-up"></use></svg>
+				</a>
+			</div>
+		</div>
+	</div>
 </footer>
-<script type="text/javascript">window.smoothScroll=function(){if(void 0!==document.querySelectorAll&&void 0!==window.pageYOffset&&void 0!==history.pushState){var e=function(e){return"HTML"===e.nodeName?-window.pageYOffset:e.getBoundingClientRect().top+window.pageYOffset},n=function(e){return.5>e?4*e*e*e:(e-1)*(2*e-2)*(2*e-2)+1},t=function(e,t,o,i){return o>i?t:e+(t-e)*n(o/i)},o=function(n,o,i){o=o||500;var r=window.pageYOffset;if("number"==typeof n)var u=parseInt(n);else var u=e(n);var a=Date.now(),d=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||function(e){window.setTimeout(e,15)},f=function(){var e=Date.now()-a;window.scroll(0,t(r,u,e,o)),e>o?"function"==typeof i&&i(n):d(f)};f()},i=function(e){e.preventDefault(),o(document.getElementById(this.hash.substring(1)),500,function(e){})};return document.addEventListener("DOMContentLoaded",function(){for(var e,n=document.querySelectorAll('a[href^="#"]'),t=n.length;e=n[--t];)e.addEventListener("click",i,!1)}),o}}();</script>
+<script>
+window.smoothScroll=function(){if(void 0!==document.querySelectorAll&&void 0!==window.pageYOffset&&void 0!==history.pushState){var e=function(e){return"HTML"===e.nodeName?-window.pageYOffset:e.getBoundingClientRect().top+window.pageYOffset},n=function(e){return.5>e?4*e*e*e:(e-1)*(2*e-2)*(2*e-2)+1},t=function(e,t,o,i){return o>i?t:e+(t-e)*n(o/i)},o=function(n,o,i){o=o||500;var r=window.pageYOffset;if("number"==typeof n)var u=parseInt(n);else var u=e(n);var a=Date.now(),d=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||function(e){window.setTimeout(e,15)},f=function(){var e=Date.now()-a;window.scroll(0,t(r,u,e,o)),e>o?"function"==typeof i&&i(n):d(f)};f()},i=function(e){e.preventDefault(),o(document.getElementById(this.hash.substring(1)),500,function(e){})};return document.addEventListener("DOMContentLoaded",function(){for(var e,n=document.querySelectorAll('a[href^="#"]'),t=n.length;e=n[--t];)e.addEventListener("click",i,!1)}),o}}();
+</script>
 {% if page.title == 'Home' %}
 <script src="js/lastfm.js"></script>
-{% elsif page.title == 'Contact'%}
-<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCbR1NyAoY-EL2bxAqeoP4e7tq2LZ6I_Qg"></script>
 {% endif %}

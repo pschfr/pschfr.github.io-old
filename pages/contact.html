@@ -1,39 +1,25 @@
 ---
-layout: full
+layout: page
 title: Contact
 permalink: /contact/
 in_footer: true
 ---
-<div style="position: relative;">
-<div id="contact-map" style="height: calc(100vh - 150px);"></div>
+<div class="col-sm-6 col-sm-push-3 large-margin large-margin-top">
 	<form id="contact-form" action="https://formspree.io/yeppaul2+website@gmail.com" method="POST">
 		<p>
 			<label for="_replyto">Your Email</label>
-			<input type="email" name="_replyto" placeholder="john@email.com">
+			<input type="email" name="_replyto" class="form-control" placeholder="john@email.com">
 		</p>
 		<p>
 			<label for="name">Your Name</label>
-			<input type="text" name="name" placeholder="John Doe">
+			<input type="text" name="name" class="form-control" placeholder="John Doe">
 		</p>
 		<input type="text" name="_gotcha" style="display:none">
 		<input type="hidden" name="_format" value="plain">
-		<input type="button" id="submit-button" onclick="checkValidation();" value="Send Message">
+		<input type="button" id="submit-button" class="btn btn-default" onclick="checkValidation();" value="Send Message">
 	</form>
 </div>
-<script type="text/javascript">
-	function initMap() {
-		// https://snazzymaps.com/style/38/shades-of-grey - edited to remove labels
-		var styleArray = [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative.country","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.natural","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.government","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
-		// Set map location and other settings
-		var map = new google.maps.Map(document.getElementById('contact-map'), {
-			center: {lat: 40.440, lng: -79.996},
-			disableDefaultUI: true,
-			styles: styleArray,
-			scrollwheel: false,
-			draggable: false,
-			zoom: 14
-		});
-	}
+<script>
 	function checkValidation() {
 		var contact_form = document.getElementById('contact-form'),
 			inputs = contact_form.getElementsByTagName('input');

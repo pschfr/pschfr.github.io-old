@@ -1,17 +1,19 @@
 <header id="top" class="site-header {% if page.url == "/" %}home{% endif %}">
-{% if page.url == "/" %}
-<div class="wrap">
-<h1 class="site-title font-normal">{{ site.title }}</h1>
-<h3 class="site-tagline font-normal">web designer<span class="amp">&nbsp;&amp;&nbsp;</span>developer</h3>
-</div>
-<a class='arrow no-underline' href='#about'>
-<svg><use xlink:href="/symbol-defs.svg#chevron-down"></use></svg>
-</a>
-</div>
-{% else %}
-<div class="wrap">
-<h1 class="site-title font-normal">{{ page.title }}</h1>
-</div>
-<a href="javascript:void(0);" onclick="history.go(-1);" class="home no-underline"><svg><use xlink:href="/symbol-defs.svg#chevron-left"></use></svg> Back</a>
-{% endif %}
+	{% if page.url == "/" %}
+		<div class="wrap">
+			<div class="fade-in-down">
+				<h1 class="site-title font-normal">{{ site.title }}</h1>
+				<h3 class="site-tagline font-normal">web designer <span class="amp">&amp;</span>developer</h3>
+			</div>
+		</div>
+		<a class='arrow no-underline fade-in-up' href='#about'>
+			<svg><use xlink:href="/symbol-defs.svg#chevron-down"></use></svg>
+		</a>
+	</div>
+	{% else %}
+		<div class="wrap">
+			<h1 class="site-title font-normal">{{ page.title }}</h1>
+		</div>
+		<a href="javascript:void(0);" onclick="history.go(-1);" class="home no-underline"><svg><use xlink:href="/symbol-defs.svg#chevron-left"></use></svg> Back</a>
+	{% endif %}
 </header>

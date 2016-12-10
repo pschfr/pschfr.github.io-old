@@ -1,24 +1,5 @@
 @charset 'utf-8'
-/* RESETS */
-html
-	font-family: $sans-font-family
-	box-sizing: border-box
-	color: $dark-color
-*, *:before, *:after
-	box-sizing: inherit
 /* COMMON CLASSES */
-.container
-	max-width: $content-width
-	max-width: 75vw
-	margin: 0 auto
-.grid__col--centered, .text-center
-	text-align: center
-.font-normal
-	font-weight: normal
-.font-bold
-	font-weight: bold
-.font-light
-	color: $grey-color
 .no-underline
 	text-decoration: none
 .no-underline:after
@@ -27,10 +8,10 @@ html
 	fill: inherit
 .small-caps
 	font-variant: small-caps
+.font-bold
+	font-weight: bold
 .text-upper
 	text-transform: uppercase
-.text-right
-	text-align: right
 .text-large
 	font-size: 130%
 .no-margin
@@ -64,12 +45,14 @@ html
 .large-padding-top
 	padding-top: 10rem
 // TYPOGRAPHY
+body
+	font: 1.6rem $serif-font-family
 img
 	max-width: 100%
 a, a:visited, a svg
 	@include prefix(transition, all 0.25s, webkit moz)
-	vertical-align: bottom
-	text-decoration: none
+	vertical-align: top
+	text-decoration: none !important
 	display: inline-block
 	position: relative
 	overflow: hidden
@@ -90,21 +73,18 @@ a svg
 	fill: currentColor
 h1, h2, h3, h4, h5, h6
 	font-family: $serif-font-family
-	line-height: 1.25
 p
-	padding-bottom: 1.5rem
-	line-height: 1.4
-	margin: 0
+	line-height: 1.5
 ul.no-bullet
 	list-style: none
 	padding: 0
 	margin:  0
 // LAYOUT
 header
-	background: black
-	background: -webkit-linear-gradient(black, $grey-color)
-	background:    -moz-linear-gradient(to bottom, black, $grey-color)
-	background:         linear-gradient(to bottom, black, $grey-color)
+	background: #6C65E8
+	background: -webkit-linear-gradient(right,   #4776E6, #8E54E9)
+	background:    -moz-linear-gradient(to left, #4776E6, #8E54E9)
+	background:         linear-gradient(to left, #4776E6, #8E54E9)
 	color: white
 header.home
 	height: 100vh
@@ -113,21 +93,26 @@ header.home
 header div.wrap
 	font-style: italic
 	text-align: center
-	font-size: 3vw
 	padding: 3vw 0
 	width: 100%
 header.home div.wrap
 	@include prefix(transform, translate(-50%, -50%), webkit moz)
 	position: absolute
-	font-size: 6vw
-	padding: 0
+	padding: 0 5rem
 	z-index: 3
 	left: 50%
 	top:  50%
-header h1
+	text-shadow: 1px 3px 10px rgba(0, 0, 0, 0.5)
+header.home div.wrap h1
+	font-size: 13rem
+	margin-bottom: 5rem
+header.home div.wrap h3
+	font-size: 10rem
+header h1, header h3
 	margin: 0
 header span.amp
-	display: inline-block
+	display: block
+	line-height: 1
 header a.arrow
 	position: absolute
 	text-align: center
@@ -135,6 +120,9 @@ header a.arrow
 	width: 100%
 	bottom: 1%
 	left:   0%
+	svg
+		height: 4rem
+		width: 4rem
 header a.arrow:hover svg
 	@include prefix(transform, scale(1.25), webkit moz)
 	@include prefix(transform-origin, center, webkit moz)
@@ -142,37 +130,29 @@ header a.home
 	text-transform: uppercase
 	padding: 1rem 0 0 1rem
 	position: absolute
-	font-size: 1.5rem
+	font-size: 1.8rem
 	color: inherit
 	left: 0
 	top:  0
+	svg
+		height: 2rem
+		width: 2rem
+header a svg
+	fill: white
 header a.home:hover
 	color: inherit
-header a.arrow svg
-	height: 2.5rem
-	width:  2.5rem
-	fill: white
-header a.home svg
-	height: 1.5rem
-	width:  1.5rem
-	fill: white
 .page-content
 	min-height: calc(100vh - 150px)
-.wrapper
-	margin-top: 3rem
-.post-list .post:nth-child(odd)
-	padding-right: 20px
 span.tag
-	background-color: lighten($grey-color, 45%)
-	color: white
 	display: inline-block
-	margin-top: 4px
-	padding: 2px
-	border-radius: 4px
+	margin: 5px 5px 10px 0
+	padding: 0 5px
+	border-radius: 5px
+	border: 1px solid
+	font-family: $sans-font-family
 .post-list .post a svg
-	height: 18px
-	width: 18px
-	vertical-align: middle
+	height: 1.8rem
+	width: 1.8rem
 .github-link svg
 	margin-top: 15px
 	height: 150px
@@ -180,11 +160,6 @@ span.tag
 .article-link svg
 	height: 24px
 	width: 24px
-	vertical-align: top
-article.post
-	width: 75%
-	margin: 0 auto
-	min-height: 40vh
 .thanks-for-reading h3
 	color: lighten($grey-color, 30%)
 	letter-spacing: 4px
@@ -193,63 +168,40 @@ article.post
 	line-height: 1.5
 #contact h2 a
 	display: inline-block
-#contact-form
-	position: absolute
-	top: calc(100vh - 100%)
-	left: 50%
-	@include prefix(transform, translateX(-50%), webkit moz)
-	input
-		background-color: rgba(0, 0, 0, 0.5)
-		color: white
-		padding: 4px
-		@include prefix(border-radius, 4px, webkit moz)
-		border: 1px solid
-	label
-		display: block
-		color: white
 footer
-	background-color: $dark-color
+	background: #59538D
+	background: -webkit-linear-gradient(right,   #516395, #614385)
+	background:    -moz-linear-gradient(to left, #516395, #614385)
+	background:         linear-gradient(to left, #516395, #614385)
 	position: relative
 	text-align: center
-	font-weight: bold
-	padding: 50px 0 0
-	font-size: 0.8rem
-	color: $light-color
+	padding: 5rem 0 0
+	font: 1.3rem/1 $sans-font-family
+	color: white
 	height: 150px
 footer svg
 	margin: 1rem 0.5rem 2rem
-	display: inline-block
-	font-weight: normal
-	height: 2rem
-	width: 2rem
+	height: 3rem
+	width: 3rem
 	fill: white
 footer a:hover svg
 	@include prefix(transform, scale(1.25), webkit moz)
 	@include prefix(transform-origin, center, webkit moz)
-	fill: white
 footer ul.page-list
 	text-align: left
 	line-height: 2
 footer ul.page-list a
 	color: inherit
 footer ul.page-list a:hover
-	text-decoration: underline
+	text-decoration: underline !important
 // RESPONSIVENESS MAGIC
 @include media-query($narrow-width)
-	.container
-		max-width: 90%
-	.grid__col
-		padding-left: 0 !important
-	header div.wrap
-		font-size: 8vw
-		padding: 6vw 0
-	header.home div.wrap
-		font-size: 11vw
+	header.home div.wrap h1
+		font-size: 8rem
+	header.home div.wrap h3
+		font-size: 6rem
 	header h1
 		margin: 0
-	header span.amp
-		margin: 0 auto
-		display: block
 	.post-list .post
 		height: auto
 		width: 100%
@@ -263,3 +215,25 @@ footer ul.page-list a:hover
 		padding: 0 5% 2rem
 	header a:hover svg, footer a:hover svg
 		@include prefix(transform, none, webkit moz)
+
+@keyframes fadeInDown
+	from
+		opacity: 0
+		@include prefix(transform, translate3d(0, -100%, 0), webkit moz)
+	to
+		opacity: 1
+		@include prefix(transform, none, webkit moz)
+
+.fade-in-down
+	@include prefix(animation, 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s both fadeInDown, webkit moz)
+
+@keyframes fadeInUp
+	from
+		opacity: 0
+		@include prefix(transform, translate3d(0, 100%, 0), webkit moz)
+	to
+		opacity: 1
+		@include prefix(transform, none, webkit moz)
+
+.fade-in-up
+	@include prefix(animation, 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1.5s both fadeInUp, webkit moz)
