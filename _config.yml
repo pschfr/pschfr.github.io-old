@@ -11,9 +11,15 @@ permalink: /:categories/:title/ # e.g. articles/title.html
 # Adds other folders besides _includes, _layouts, _posts
 includes:
 - favicons
-- images
 - pages
 - js
+
+# Removes files and folders from jekyll build
+exclude:
+- node_modules
+- gulpfile.js
+- README.md
+- svg
 
 # Obviously compresses the Sass output.
 sass:
