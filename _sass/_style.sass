@@ -81,10 +81,7 @@ ul.no-bullet
 	margin:  0
 // LAYOUT
 header
-	background: #6C65E8
-	background: -webkit-linear-gradient(right,   #4776E6, #8E54E9)
-	background:    -moz-linear-gradient(to left, #4776E6, #8E54E9)
-	background:         linear-gradient(to left, #4776E6, #8E54E9)
+	background: #222 no-repeat center/cover fixed
 	color: white
 header.home
 	height: 100vh
@@ -169,10 +166,7 @@ span.tag
 #contact h2 a
 	display: inline-block
 footer
-	background: #59538D
-	background: -webkit-linear-gradient(right,   #516395, #614385)
-	background:    -moz-linear-gradient(to left, #516395, #614385)
-	background:         linear-gradient(to left, #516395, #614385)
+	background: #222 no-repeat center/cover fixed
 	position: relative
 	text-align: center
 	padding: 5rem 0 0
@@ -216,24 +210,11 @@ footer ul.page-list a:hover
 	header a:hover svg, footer a:hover svg
 		@include prefix(transform, none, webkit moz)
 
-@keyframes fadeInDown
+@keyframes fadeIn
 	from
 		opacity: 0
-		@include prefix(transform, translate3d(0, -100%, 0), webkit moz)
 	to
 		opacity: 1
-		@include prefix(transform, none, webkit moz)
 
-.fade-in-down
-	@include prefix(animation, 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s both fadeInDown, webkit moz)
-
-@keyframes fadeInUp
-	from
-		opacity: 0
-		@include prefix(transform, translate3d(0, 100%, 0), webkit moz)
-	to
-		opacity: 1
-		@include prefix(transform, none, webkit moz)
-
-.fade-in-up
-	@include prefix(animation, 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1.5s both fadeInUp, webkit moz)
+.fade-in
+	@include prefix(animation, 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s both fadeIn, webkit moz)
