@@ -18,6 +18,7 @@ includes:
 exclude:
 - node_modules
 - gulpfile.js
+- gulpfile_example.js
 - README.md
 - svg
 
