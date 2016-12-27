@@ -18,7 +18,6 @@ function lastFM_request(method, username, API_key, number, elementID) {
 				} else if (method == 'user.getrecenttracks') {
 					var track = obj.recenttracks.track[0];
 					var total = obj.recenttracks['\@attr'].total;
-					console.log(total);
 					if (track['\@attr'] && track['\@attr'].nowplaying !== '')
 						element.innerHTML += 'I am currently listening to:<br/>';
 					else
