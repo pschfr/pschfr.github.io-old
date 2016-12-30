@@ -236,10 +236,15 @@ footer
 @keyframes fadeIn
 	from
 		opacity: 0
+		@include prefix(transform, translate3d(0, -33%, 0), webkit moz)
 	to
 		opacity: 1
+		@include prefix(transform, none, webkit moz)
 
 .fade-in
 	@include prefix(animation, 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s both fadeIn, webkit moz)
-.delayed
-	@include prefix(animation-delay, 1s, webkit moz)
+
+@for $i from 1 through 3
+	$delay: $i / 2
+	.delay-#{$i}
+		@include prefix(animation-delay, #{$delay}s, webkit moz)

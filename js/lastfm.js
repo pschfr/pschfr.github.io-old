@@ -16,14 +16,16 @@ function lastFM_request(method, username, API_key, number, elementID) {
 					}
 
 				} else if (method == 'user.getrecenttracks') {
-					var track = obj.recenttracks.track[0];
-					var total = obj.recenttracks['\@attr'].total;
+					var track = obj.recenttracks.track[0],
+						total = obj.recenttracks['\@attr'].total,
+						nf = new Intl.NumberFormat();
+
 					if (track['\@attr'] && track['\@attr'].nowplaying !== '')
 						element.innerHTML += 'I am currently listening to:<br/>';
 					else
 						element.innerHTML += 'I last listened to:<br/>';
 					element.innerHTML += '<a href="' + track.url + '" target="_blank" rel="noreferrer noopener" title="on album: ' + track.album['\#text'] + '">' + track.artist['\#text'] + ' &mdash; ' + track.name + '</a> ';
-					element.innerHTML += '<br/><br/><p><small><em>' + total + ' tracks total!</em></small></p>';
+					element.innerHTML += '<br/><br/><p><small><em>' + nf.format(total) + ' tracks since Sept. 2012!</em></small></p>';
 				}
 			}
 		}
