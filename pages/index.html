@@ -6,14 +6,14 @@ in_footer: true
 has_contact: true
 ---
 <section id="about" class="row large-margin large-margin-top">
-	<div class="col-sm-8">
+	<div class="col-sm-8 col-xs-12">
 		<h1 class="page-heading font-bold">Hello world!</h1>
-		<h2 class="font-normal small-margin">I'm a designer and developer with a passion for clean&nbsp;&amp;&nbsp;efficient websites.</h2>
+		<h2 class="small-margin">I'm a designer and developer with a passion for clean&nbsp;&amp;&nbsp;efficient websites.</h2>
 		<p>I aim to make the world a happier, cleaner, and more functional place.</p>
 		<p>Follow along with my ramblings on <a href="https://twitter.com/pschfr" target="_blank" rel="noopener noreferrer">Twitter</a>, or my code on <a href="https://github.com/pschfr" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
 		<p>Have any questions, or want to work with me? <a href="/contact">Ask away!</a></p>
 	</div>
-	<div class="col-sm-4">
+	<div class="col-sm-4 col-xs-12">
 		<div id="topartists" class="text-center small-margin-top"></div>
 		<div id="currentlylistening" class="text-center small-margin-top"></div>
 	</div>
@@ -23,34 +23,36 @@ has_contact: true
 	{% if site.categories['work'] %}
 		<div class="col-xs-12">
 			<h2 class="small-caps no-margin-bottom font-bold">Featured Work</h2>
-			<h3 class="small-caps no-margin-top font-normal text-muted">Projects made for Clients &amp; Friends</h3>
+			<h3 class="small-caps no-margin-top text-muted">Projects made for Clients &amp; Friends</h3>
 		</div>
-		<div class="post-list no-bullet medium-margin">
+		<div class="medium-margin">
 			{% for item in site.categories['work'] %}
-				<div class="post col-sm-6 col-xs-12">
-					<h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
+				<div class="col-sm-6 col-xs-12 small-margin">
+					<h2 class="no-margin-bottom">{{ item.title }}</h2>
 					{% for tag in item.tags %}<span class="tag text-muted">{{ tag }}</span>{% endfor %}
 					{{ item.content }}
-					<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
+					<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">View the site<svg class="continue"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
 				</div>
 			{% endfor %}
 		</div>
 	{% endif %}
 </section>
 
-<section id="experiments" class="row">
+<section id="experiments">
 	{% if site.categories['experiments'] %}
-		<div class="col-xs-12">
-			<h2 class="small-caps no-margin-bottom font-bold">My Experiments</h2>
-			<h3 class="small-caps no-margin-top font-normal text-muted">It's Aliveeeeeee!</h3>
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="small-caps no-margin-bottom font-bold">My Experiments</h2>
+				<h3 class="small-caps no-margin-top text-muted">It's Aliveeeeeee!</h3>
+			</div>
 		</div>
-		<div class="post-list no-bullet small-margin">
+		<div class="small-margin row">
 			{% for item in site.categories['experiments'] %}
-				<div class="post col-sm-6 col-xs-12">
-					<h2 class="font-normal no-margin-bottom">{{ item.title }}</h2>
+				<div class="col-sm-6 col-xs-12 small-margin">
+					<h2 class="no-margin-bottom">{{ item.title }}</h2>
 					{% for tag in item.tags %}<span class="tag text-muted">{{ tag }}</span>{% endfor %}
 					{{ item.content }}
-					<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">View the site<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
+					<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">View the site<svg class="continue"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
 				</div>
 			{% endfor %}
 		</div>
@@ -60,7 +62,7 @@ has_contact: true
 <section id="github" class="row">
 	<div class="col-xs-12">
 		<h1 class="text-center large-margin github-link">
-			<a href="https://github.com/pschfr" target=_"blank" rel="noopener noreferrer" class="no-fill no-underline font-bold">View all projects on my GitHub!<br><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#octocat"></use></svg></a>
+			<a href="https://github.com/pschfr" target=_"blank" rel="noopener noreferrer" class="no-fill no-underline font-bold">View all projects on my GitHub!<br><svg class="continue"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#octocat"></use></svg></a>
 		</h1>
 	</div>
 </section>
@@ -69,19 +71,19 @@ has_contact: true
 	{% if site.categories['articles'] %}
 		<div class="col-xs-12">
 			<h2 class="small-caps no-margin-bottom font-bold">Latest Posts</h2>
-			<h3 class="small-caps no-margin-top font-normal text-muted">Fresh off the Presses</h3>
+			<h3 class="small-caps no-margin-top text-muted">Fresh off the Presses</h3>
 		</div>
-		<div class="post-list no-bullet medium-margin">
+		<div class="medium-margin">
 			{% for item in site.categories['articles'] %}
-				<div class="post col-sm-4 col-xs-12">
-					<h2 class="font-normal no-margin-bottom"><a href="{{ item.url }}" class="no-underline">{{ item.title }}</a></h2>
-					<h4 class="font-normal no-margin-top text-muted"><em>{{ item.date | date: "%b %-d, %Y" }}</em></h4>
+				<div class="col-sm-4 col-xs-12 small-margin">
+					<h2 class="no-margin-bottom"><a href="{{ item.url }}" class="no-underline">{{ item.title }}</a></h2>
+					<h4 class="no-margin-top text-muted"><em>{{ item.date | date: "%b %-d, %Y" }}</em></h4>
 					{{ item.excerpt }}
-					<a href="{{ item.url }}">Continue reading<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
+					<a href="{{ item.url }}">Continue reading<svg class="continue"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/symbol-defs.svg#chevron-right"></use></svg></a>
 				</div>
 			{% endfor %}
 			{% if site.categories['articles'].size < 3 %}
-				<div class="post col-sm-4 col-xs-12">
+				<div class="col-sm-4 col-xs-12 small-margin">
 					<h2 class="medium-margin-top large-margin font-bold">More articles coming!</h2>
 				</div>
 			{% endif %}

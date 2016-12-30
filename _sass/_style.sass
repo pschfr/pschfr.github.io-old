@@ -147,7 +147,7 @@ header a svg
 header a.home:hover
 	color: inherit
 .page-content
-	min-height: calc(100vh - 150px)
+	min-height: calc(100vh - 142px)
 span.tag
 	display: inline-block
 	margin: 5px 5px 10px 0
@@ -155,7 +155,7 @@ span.tag
 	border-radius: 5px
 	border: 1px solid
 	font-family: $sans-font-family
-.post-list .post a svg
+svg.continue
 	height: 1.8rem
 	width: 1.8rem
 .github-link svg
@@ -171,62 +171,65 @@ span.tag
 #contact h2
 	font-size: 1.75rem
 	line-height: 1.5
-#contact h2 a
-	display: inline-block
+	a
+		display: inline-block
 footer
 	background: #222 no-repeat center/cover fixed
 	position: relative
 	text-align: center
-	padding: 5rem 0 0
+	padding: 2.5rem 0
 	font: 1.3rem/1 $sans-font-family
 	color: white
-	height: 150px
-footer.home
-	background-image: url('https://source.unsplash.com/collection/471702/')
-	.overlay
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background-color: rgba(0, 0, 0, 0.3)
-footer svg
-	margin: 1rem 0.5rem 2rem
-	height: 3rem
-	width: 3rem
-	fill: white
-footer a:hover svg
-	@include prefix(transform, scale(1.25), webkit moz)
-	@include prefix(transform-origin, center, webkit moz)
-footer ul.page-list
-	text-align: left
-	line-height: 2
-footer ul.page-list a
-	color: inherit
-footer ul.page-list a:hover
-	text-decoration: underline !important
+	svg
+		margin: 1rem 0.5rem 0
+		height: 3rem
+		width: 3rem
+		fill: white
+	a:hover svg
+		@include prefix(transform, scale(1.25), webkit moz)
+		@include prefix(transform-origin, center, webkit moz)
+	ul.page-list
+		text-align: left
+		line-height: 1.8
+		a
+			color: inherit
+			&:hover
+				text-decoration: underline !important
+	.row
+		display: flex
+		align-items: center
+		.col-xs-12
+			flex: 1
+	&.home
+		background-image: url('https://source.unsplash.com/collection/471702/')
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(0, 0, 0, 0.3)
 // RESPONSIVENESS MAGIC
 @include media-query($narrow-width)
 	header.home div.wrap
 		padding: 0
 		text-shadow: none
-	header.home div.wrap h1
-		font-size: 7rem
-	header.home div.wrap h3
-		font-size: 5rem
+		h1
+			font-size: 7rem
+		h3
+			font-size: 5rem
 	header h1
 		margin: 0
-	.post-list .post
-		height: auto
-		width: 100%
-		margin-bottom: 3rem
 	footer
-		height: auto
-	footer ul.page-list
-		text-align: center
-	footer ul.page-list li
-		display: inline-block
-		padding: 0 5% 2rem
+		.row
+			display: inherit
+			.col-xs-12
+				margin-bottom: 3rem
+		ul.page-list
+			text-align: center
+			li
+				display: inline-block
+				padding: 0 5% 2rem
 	header a:hover svg, footer a:hover svg
 		@include prefix(transform, none, webkit moz)
 

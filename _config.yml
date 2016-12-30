@@ -5,7 +5,7 @@ tagline: web designer and developer
 email: yeppaul2@gmail.com
 description: Paul Schaefer is a web designer and developer living in the lovely Pittsburgh, PA.
 baseurl: ""
-url: "https://pschfr.github.io"
+url: "https://paulmakesthe.net"
 permalink: /:categories/:title/ # e.g. articles/title.html
 
 # Adds other folders besides _includes, _layouts, _posts
